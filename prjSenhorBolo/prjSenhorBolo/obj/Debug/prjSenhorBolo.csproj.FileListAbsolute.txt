@@ -1,0 +1,12 @@
+C:\Users\Felipe Ribeiro\OneDrive - Etec Centro Paula Souza\@Trabalhos\ETESP\Desenvolvimento de Sistemas\@Projeto\prjSenhorBolo\prjSenhorBolo\bin\Debug\prjSenhorBolo.exe.config
+C:\Users\Felipe Ribeiro\OneDrive - Etec Centro Paula Souza\@Trabalhos\ETESP\Desenvolvimento de Sistemas\@Projeto\prjSenhorBolo\prjSenhorBolo\bin\Debug\prjSenhorBolo.exe
+C:\Users\Felipe Ribeiro\OneDrive - Etec Centro Paula Souza\@Trabalhos\ETESP\Desenvolvimento de Sistemas\@Projeto\prjSenhorBolo\prjSenhorBolo\bin\Debug\prjSenhorBolo.pdb
+C:\Users\Felipe Ribeiro\OneDrive - Etec Centro Paula Souza\@Trabalhos\ETESP\Desenvolvimento de Sistemas\@Projeto\prjSenhorBolo\prjSenhorBolo\obj\Debug\prjSenhorBolo.csprojAssemblyReference.cache
+C:\Users\Felipe Ribeiro\OneDrive - Etec Centro Paula Souza\@Trabalhos\ETESP\Desenvolvimento de Sistemas\@Projeto\prjSenhorBolo\prjSenhorBolo\obj\Debug\prjSenhorBolo.Form1.resources
+C:\Users\Felipe Ribeiro\OneDrive - Etec Centro Paula Souza\@Trabalhos\ETESP\Desenvolvimento de Sistemas\@Projeto\prjSenhorBolo\prjSenhorBolo\obj\Debug\prjSenhorBolo.Properties.Resources.resources
+C:\Users\Felipe Ribeiro\OneDrive - Etec Centro Paula Souza\@Trabalhos\ETESP\Desenvolvimento de Sistemas\@Projeto\prjSenhorBolo\prjSenhorBolo\obj\Debug\prjSenhorBolo.csproj.GenerateResource.cache
+C:\Users\Felipe Ribeiro\OneDrive - Etec Centro Paula Souza\@Trabalhos\ETESP\Desenvolvimento de Sistemas\@Projeto\prjSenhorBolo\prjSenhorBolo\obj\Debug\prjSenhorBolo.csproj.CoreCompileInputs.cache
+C:\Users\Felipe Ribeiro\OneDrive - Etec Centro Paula Souza\@Trabalhos\ETESP\Desenvolvimento de Sistemas\@Projeto\prjSenhorBolo\prjSenhorBolo\obj\Debug\prjSenhorBolo.exe
+C:\Users\Felipe Ribeiro\OneDrive - Etec Centro Paula Souza\@Trabalhos\ETESP\Desenvolvimento de Sistemas\@Projeto\prjSenhorBolo\prjSenhorBolo\obj\Debug\prjSenhorBolo.pdb
+C:\Users\Felipe Ribeiro\OneDrive - Etec Centro Paula Souza\@Trabalhos\ETESP\Desenvolvimento de Sistemas\@Projeto\prjSenhorBolo\prjSenhorBolo\obj\Debug\prjSenhorBolo.Login.resources
+C:\Users\Felipe Ribeiro\OneDrive - Etec Centro Paula Souza\@Trabalhos\ETESP\Desenvolvimento de Sistemas\@Projeto\prjSenhorBolo\prjSenhorBolo\obj\Debug\prjSenhorBolo.Home.resources
