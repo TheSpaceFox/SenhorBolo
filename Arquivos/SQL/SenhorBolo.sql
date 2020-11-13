@@ -1,4 +1,7 @@
 CREATE DATABASE SrBolo
+CREATE DATABASE SrBolor
+USE SrBolor
+DROP DATABASE SrBolor
 USE SrBolo
 DROP DATABASE SrBolo
 
@@ -6,10 +9,10 @@ CREATE TABLE tblFuncionarios(
 	idFuncionario INT PRIMARY KEY,
 	nomeFunc VARCHAR(50) NOT NULL,
 	senhaFunc VARCHAR(50),
-	RG VARCHAR(8),
-	salario NUMERIC(5,2),
+	RG VARCHAR(12),
+	salario NUMERIC(6,2),
 	email VARCHAR(50),
-	telefone VARCHAR(11),
+	telefone VARCHAR(10),
 	CEP VARCHAR (9)
 )
 
@@ -39,7 +42,7 @@ CREATE TABLE tblAdministrador (
 )
 
 CREATE TABLE tblFornecedor(
-	CNPJ VARCHAR(14),
+	CNPJ VARCHAR(18) PRIMARY KEY,
 	descFor VARCHAR(30),
 	contatoFor CHAR(30),
 	enderecoFor VARCHAR(50),
