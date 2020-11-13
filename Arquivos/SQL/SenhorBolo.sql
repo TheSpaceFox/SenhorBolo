@@ -94,6 +94,6 @@ insert into tblAdministrador values
 insert into tblFornecedor values
 ('90918875000160', 'Senhor Suíno', '128359112', 'Rua Magno Lopes', 'João Pessoa'),
 ('69962574000147', 'Açucar União', '357420416', 'Rua Floriano Peixoto', 'Boa Vista'),
-('65.952287000103', 'Itambé', '103160599', 'Avenida Fernando Baggi', 'Salvador'),
-('28.707298000193', 'Petrobras', '146768498', '2ª Travessa Sudão', 'Feira de Santana'),
-('48.661629000109', 'Renner', '319148238', 'Travessa Menino Marcelo', 'Maceió')
+('65952287000103', 'Itambé', '103160599', 'Avenida Fernando Baggi', 'Salvador'),
+('28707298000193', 'Petrobras', '146768498', '2ª Travessa Sudão', 'Feira de Santana'),
+('48661629000109', 'Renner', '319148238', 'Travessa Menino Marcelo', 'Maceió')
