@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SenhorBolo.model;
 
 namespace SenhorBolo
 {
@@ -33,6 +34,19 @@ namespace SenhorBolo
         private void controlFechar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            if (txtID.Text == "" || txtNome.Text == "" || txtSenha.Text == "" || txtRG.Text == "" || txtCPF.Text == "" || txtSalario.Text == "" || txtTelefone.Text == "")
+            {
+                MessageBox.Show("Pro favor, preencha todos os campos obrigatórios");
+            }
+            else
+            {
+                CadastroFuncionarioModel cadastro = new CadastroFuncionarioModel();
+                cadastro.Cadastrar(Convert.ToInt32(txtID.Text), txtNome.Text, txtSenha.Text, txtRG.Text, txtCPF.Text, Convert.ToDouble(txtSalario.Text), txtEmail.Text, txtTelefone.Text, txtCEP.Text);
+            }
         }
     }
 }

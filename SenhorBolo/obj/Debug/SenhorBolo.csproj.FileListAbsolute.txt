@@ -28,3 +28,20 @@ C:\Users\Felipe Ribeiro\Downloads\SenhorBolo-master\SenhorBolo-master\SenhorBolo
 C:\Users\Felipe Ribeiro\Downloads\SenhorBolo-master\SenhorBolo-master\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.CadastroFuncionario.resources
 C:\Users\Felipe Ribeiro\Downloads\SenhorBolo-master\SenhorBolo-master\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.Ednaldo.resources
 C:\Users\Felipe Ribeiro\Downloads\SenhorBolo-master\SenhorBolo-master\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.GerenciarFuncionario.resources
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\bin\Debug\SenhorBolo.exe.config
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\bin\Debug\SenhorBolo.exe
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\bin\Debug\SenhorBolo.pdb
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.csprojAssemblyReference.cache
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.CadastroFuncionario.resources
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.Caixa.resources
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.Ednaldo.resources
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.Gerenciamento.resources
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.GerenciarFuncionario.resources
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.Login.resources
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.Properties.Resources.resources
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.Splash.resources
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.csproj.GenerateResource.cache
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.csproj.CoreCompileInputs.cache
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.csproj.CopyComplete
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.exe
+C:\Users\felip\OneDrive\Documentos\SenhorBolo\SenhorBolo\obj\Debug\SenhorBolo.pdb
