@@ -1,7 +1,4 @@
 CREATE DATABASE SrBolo
-CREATE DATABASE SrBolor
-USE SrBolor
-DROP DATABASE SrBolor
 USE SrBolo
 DROP DATABASE SrBolo
 
@@ -9,7 +6,7 @@ CREATE TABLE tblFuncionarios(
 	idFuncionario INT PRIMARY KEY,
 	nomeFunc VARCHAR(50) NOT NULL,
 	senhaFunc VARCHAR(50),
-	RG VARCHAR(12),
+	RG VARCHAR(8),
 	salario NUMERIC(6,2),
 	email VARCHAR(50),
 	telefone VARCHAR(10),
@@ -93,15 +90,43 @@ insert into tblAdministrador values
 (3, 'Mazete Ribeiro', 'Santos80'),
 (4, 'Alessandra Gouveia', 'Nicole89'),
 (5, 'Felipe', 'SandroSlayer21')
+insert into tblAdministrador values(6, 'Nipes', '1234')
 
 insert into tblFornecedor values
-('90918875000160', 'Senhor Suíno', '128359112', 'Rua Magno Lopes', 'João Pessoa'),
-('69962574000147', 'Açucar União', '357420416', 'Rua Floriano Peixoto', 'Boa Vista'),
-('65952287000103', 'Itambé', '103160599', 'Avenida Fernando Baggi', 'Salvador'),
-('28707298000193', 'Petrobras', '146768498', '2ª Travessa Sudão', 'Feira de Santana'),
-('48661629000109', 'Renner', '319148238', 'Travessa Menino Marcelo', 'Maceió')
 ('90.918.875/0001-60', 'Senhor Suíno', '12835-9112', 'Rua Magno Lopes', 'João Pessoa'),
 ('69.962.574/0001-47', 'Açucar União', '35742-0416', 'Rua Floriano Peixoto', 'Boa Vista'),
 ('65.952.287/0001-03', 'Itambé', '10316-0599', 'Avenida Fernando Baggi', 'Salvador'),
 ('28.707.298/0001-93', 'Petrobras', '14676-8498', '2ª Travessa Sudão', 'Feira de Santana'),
-('48.661.629/0001-09', 'Renner', '31914-8238', 'Travessa Menino Marcelo', 'Maceió')	
+('48.661.629/0001-09', 'Renner', '31914-8238', 'Travessa Menino Marcelo', 'Maceió')
+
+-- Procedimentos
+
+-- Listar Funcionarios
+
+create proc ListarFuncionarios
+as
+Select * from tblFuncionarios 
+go
+
+-- Cadastrar Funcionarios
+CREATE PROC CadastrarFuncionarios
+	@idFuncionario INT,
+	@nomeFunc VARCHAR(50),
+	@senhaFunc VARCHAR(50),
+	@RG VARCHAR(8),
+	@salario NUMERIC(6,2),
+	@email VARCHAR(50),
+	@telefone VARCHAR(10),
+	@CEP VARCHAR (9)
+AS 
+INSERT INTO tblFuncionarios VALUES (@idFuncionario, @nomeFunc, @senhaFunc, @RG, @SALARIO, @EMAIL, @TELEFONE, @CEP)
+GO
+
+-- Pesquisar Funcionarios 
+
+CREATE PROC PesquisarFuncionarios
+	@Campo SYSNAME,
+	@Pesquisa VARCHAR(100)
+AS 
+	SELECT * FROM tblFuncionarios WHERE @Campo LIKE '%' + @Pesquisa + '%'
+GO
