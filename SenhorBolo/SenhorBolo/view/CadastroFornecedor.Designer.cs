@@ -62,22 +62,22 @@
             // lblAsteristico
             // 
             this.lblAsteristico.BackColor = System.Drawing.Color.Transparent;
-            this.lblAsteristico.Font = new System.Drawing.Font("Helvetica", 13F);
+            this.lblAsteristico.Font = new System.Drawing.Font("Arial", 13F);
             this.lblAsteristico.ForeColor = System.Drawing.Color.Red;
             this.lblAsteristico.Location = new System.Drawing.Point(123, 624);
             this.lblAsteristico.Name = "lblAsteristico";
-            this.lblAsteristico.Size = new System.Drawing.Size(10, 22);
+            this.lblAsteristico.Size = new System.Drawing.Size(13, 33);
             this.lblAsteristico.TabIndex = 61;
             this.lblAsteristico.Text = "*";
             // 
             // lblCampoObrigatorio
             // 
             this.lblCampoObrigatorio.BackColor = System.Drawing.Color.Transparent;
-            this.lblCampoObrigatorio.Font = new System.Drawing.Font("Helvetica", 12F);
+            this.lblCampoObrigatorio.Font = new System.Drawing.Font("Arial", 12F);
             this.lblCampoObrigatorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.lblCampoObrigatorio.Location = new System.Drawing.Point(145, 624);
             this.lblCampoObrigatorio.Name = "lblCampoObrigatorio";
-            this.lblCampoObrigatorio.Size = new System.Drawing.Size(143, 21);
+            this.lblCampoObrigatorio.Size = new System.Drawing.Size(212, 29);
             this.lblCampoObrigatorio.TabIndex = 60;
             this.lblCampoObrigatorio.Text = "Campos obrigatório";
             // 
@@ -86,7 +86,7 @@
             this.btnLimpar.CheckedState.Parent = this.btnLimpar;
             this.btnLimpar.CustomImages.Parent = this.btnLimpar;
             this.btnLimpar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(186)))), ((int)(((byte)(179)))));
-            this.btnLimpar.Font = new System.Drawing.Font("Helvetica", 13.5F);
+            this.btnLimpar.Font = new System.Drawing.Font("Arial", 13.5F);
             this.btnLimpar.ForeColor = System.Drawing.Color.White;
             this.btnLimpar.HoverState.Parent = this.btnLimpar;
             this.btnLimpar.Location = new System.Drawing.Point(500, 614);
@@ -102,7 +102,7 @@
             this.btnRegistrar.CheckedState.Parent = this.btnRegistrar;
             this.btnRegistrar.CustomImages.Parent = this.btnRegistrar;
             this.btnRegistrar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(158)))), ((int)(((byte)(153)))));
-            this.btnRegistrar.Font = new System.Drawing.Font("Helvetica", 13.5F);
+            this.btnRegistrar.Font = new System.Drawing.Font("Arial", 13.5F);
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.HoverState.Parent = this.btnRegistrar;
             this.btnRegistrar.Location = new System.Drawing.Point(660, 614);
@@ -111,6 +111,7 @@
             this.btnRegistrar.Size = new System.Drawing.Size(145, 36);
             this.btnRegistrar.TabIndex = 58;
             this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtEndereco
             // 
@@ -124,7 +125,7 @@
             this.txtEndereco.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEndereco.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEndereco.FocusedState.Parent = this.txtEndereco;
-            this.txtEndereco.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereco.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereco.ForeColor = System.Drawing.Color.Black;
             this.txtEndereco.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEndereco.HoverState.Parent = this.txtEndereco;
@@ -142,11 +143,11 @@
             // lblEndereco
             // 
             this.lblEndereco.BackColor = System.Drawing.Color.Transparent;
-            this.lblEndereco.Font = new System.Drawing.Font("Helvetica", 13.5F);
+            this.lblEndereco.Font = new System.Drawing.Font("Arial", 13.5F);
             this.lblEndereco.ForeColor = System.Drawing.Color.Black;
             this.lblEndereco.Location = new System.Drawing.Point(543, 286);
             this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(80, 23);
+            this.lblEndereco.Size = new System.Drawing.Size(119, 34);
             this.lblEndereco.TabIndex = 56;
             this.lblEndereco.Text = "Endereço";
             // 
@@ -162,7 +163,7 @@
             this.txtDescricao.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDescricao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescricao.FocusedState.Parent = this.txtDescricao;
-            this.txtDescricao.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescricao.ForeColor = System.Drawing.Color.Black;
             this.txtDescricao.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescricao.HoverState.Parent = this.txtDescricao;
@@ -181,11 +182,11 @@
             // lblDescricao
             // 
             this.lblDescricao.BackColor = System.Drawing.Color.Transparent;
-            this.lblDescricao.Font = new System.Drawing.Font("Helvetica", 13.5F);
+            this.lblDescricao.Font = new System.Drawing.Font("Arial", 13.5F);
             this.lblDescricao.ForeColor = System.Drawing.Color.Black;
             this.lblDescricao.Location = new System.Drawing.Point(127, 323);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(83, 23);
+            this.lblDescricao.Size = new System.Drawing.Size(125, 34);
             this.lblDescricao.TabIndex = 54;
             this.lblDescricao.Text = "Descrição";
             // 
@@ -201,7 +202,7 @@
             this.txtCidade.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCidade.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCidade.FocusedState.Parent = this.txtCidade;
-            this.txtCidade.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.ForeColor = System.Drawing.Color.Black;
             this.txtCidade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCidade.HoverState.Parent = this.txtCidade;
@@ -219,11 +220,11 @@
             // lblCidade
             // 
             this.lblCidade.BackColor = System.Drawing.Color.Transparent;
-            this.lblCidade.Font = new System.Drawing.Font("Helvetica", 13.5F);
+            this.lblCidade.Font = new System.Drawing.Font("Arial", 13.5F);
             this.lblCidade.ForeColor = System.Drawing.Color.Black;
             this.lblCidade.Location = new System.Drawing.Point(543, 368);
             this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(60, 23);
+            this.lblCidade.Size = new System.Drawing.Size(89, 34);
             this.lblCidade.TabIndex = 52;
             this.lblCidade.Text = "Cidade";
             // 
@@ -239,7 +240,7 @@
             this.txtCNPJ.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCNPJ.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCNPJ.FocusedState.Parent = this.txtCNPJ;
-            this.txtCNPJ.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCNPJ.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCNPJ.ForeColor = System.Drawing.Color.Black;
             this.txtCNPJ.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCNPJ.HoverState.Parent = this.txtCNPJ;
@@ -257,11 +258,11 @@
             // lblCNPJ
             // 
             this.lblCNPJ.BackColor = System.Drawing.Color.Transparent;
-            this.lblCNPJ.Font = new System.Drawing.Font("Helvetica", 13.5F);
+            this.lblCNPJ.Font = new System.Drawing.Font("Arial", 13.5F);
             this.lblCNPJ.ForeColor = System.Drawing.Color.Black;
             this.lblCNPJ.Location = new System.Drawing.Point(127, 241);
             this.lblCNPJ.Name = "lblCNPJ";
-            this.lblCNPJ.Size = new System.Drawing.Size(50, 23);
+            this.lblCNPJ.Size = new System.Drawing.Size(72, 34);
             this.lblCNPJ.TabIndex = 50;
             this.lblCNPJ.Text = "CNPJ";
             // 
@@ -277,10 +278,10 @@
             // lblCadastroFornecedores
             // 
             this.lblCadastroFornecedores.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadastroFornecedores.Font = new System.Drawing.Font("Helvetica", 22F, System.Drawing.FontStyle.Bold);
+            this.lblCadastroFornecedores.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold);
             this.lblCadastroFornecedores.Location = new System.Drawing.Point(56, 47);
             this.lblCadastroFornecedores.Name = "lblCadastroFornecedores";
-            this.lblCadastroFornecedores.Size = new System.Drawing.Size(365, 37);
+            this.lblCadastroFornecedores.Size = new System.Drawing.Size(545, 53);
             this.lblCadastroFornecedores.TabIndex = 48;
             this.lblCadastroFornecedores.Text = "Cadastro de fornecedores";
             // 
@@ -296,7 +297,7 @@
             this.txtContato.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtContato.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtContato.FocusedState.Parent = this.txtContato;
-            this.txtContato.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContato.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContato.ForeColor = System.Drawing.Color.Black;
             this.txtContato.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtContato.HoverState.Parent = this.txtContato;
@@ -315,11 +316,11 @@
             // lblContato
             // 
             this.lblContato.BackColor = System.Drawing.Color.Transparent;
-            this.lblContato.Font = new System.Drawing.Font("Helvetica", 13.5F);
+            this.lblContato.Font = new System.Drawing.Font("Arial", 13.5F);
             this.lblContato.ForeColor = System.Drawing.Color.Black;
             this.lblContato.Location = new System.Drawing.Point(127, 405);
             this.lblContato.Name = "lblContato";
-            this.lblContato.Size = new System.Drawing.Size(66, 23);
+            this.lblContato.Size = new System.Drawing.Size(99, 34);
             this.lblContato.TabIndex = 63;
             this.lblContato.Text = "Contato";
             // 
