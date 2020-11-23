@@ -32,17 +32,13 @@
             this.separator = new Guna.UI2.WinForms.Guna2Separator();
             this.lblId = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTelefone = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTelefone = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblSenha = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtNome = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblNome = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtRG = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblRG = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtSalario = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblSalario = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtCEP = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblCEP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblEmail = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -51,6 +47,10 @@
             this.lblCampoObrigatorio = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblAsteristico = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.controlFechar = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.txtRG = new System.Windows.Forms.MaskedTextBox();
+            this.txtCEP = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtSalario = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // lblCadastroFuncionarios
@@ -110,33 +110,6 @@
             this.txtID.Size = new System.Drawing.Size(252, 35);
             this.txtID.TabIndex = 3;
             // 
-            // txtTelefone
-            // 
-            this.txtTelefone.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTelefone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTelefone.DefaultText = "";
-            this.txtTelefone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTelefone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTelefone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTelefone.DisabledState.Parent = this.txtTelefone;
-            this.txtTelefone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTelefone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelefone.FocusedState.Parent = this.txtTelefone;
-            this.txtTelefone.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.ForeColor = System.Drawing.Color.Black;
-            this.txtTelefone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTelefone.HoverState.Parent = this.txtTelefone;
-            this.txtTelefone.Location = new System.Drawing.Point(554, 244);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.PasswordChar = '\0';
-            this.txtTelefone.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtTelefone.PlaceholderText = "";
-            this.txtTelefone.SelectedText = "";
-            this.txtTelefone.ShadowDecoration.Parent = this.txtTelefone;
-            this.txtTelefone.Size = new System.Drawing.Size(252, 35);
-            this.txtTelefone.TabIndex = 5;
-            // 
             // lblTelefone
             // 
             this.lblTelefone.BackColor = System.Drawing.Color.Transparent;
@@ -174,7 +147,6 @@
             this.txtSenha.ShadowDecoration.Parent = this.txtSenha;
             this.txtSenha.Size = new System.Drawing.Size(252, 35);
             this.txtSenha.TabIndex = 7;
-            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // lblSenha
             // 
@@ -225,33 +197,6 @@
             this.lblNome.TabIndex = 8;
             this.lblNome.Text = "Nome";
             // 
-            // txtRG
-            // 
-            this.txtRG.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtRG.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtRG.DefaultText = "";
-            this.txtRG.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtRG.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtRG.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRG.DisabledState.Parent = this.txtRG;
-            this.txtRG.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRG.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRG.FocusedState.Parent = this.txtRG;
-            this.txtRG.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRG.ForeColor = System.Drawing.Color.Black;
-            this.txtRG.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRG.HoverState.Parent = this.txtRG;
-            this.txtRG.Location = new System.Drawing.Point(125, 413);
-            this.txtRG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtRG.Name = "txtRG";
-            this.txtRG.PasswordChar = '\0';
-            this.txtRG.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtRG.PlaceholderText = "";
-            this.txtRG.SelectedText = "";
-            this.txtRG.ShadowDecoration.Parent = this.txtRG;
-            this.txtRG.Size = new System.Drawing.Size(252, 35);
-            this.txtRG.TabIndex = 11;
-            // 
             // lblRG
             // 
             this.lblRG.BackColor = System.Drawing.Color.Transparent;
@@ -263,33 +208,6 @@
             this.lblRG.TabIndex = 10;
             this.lblRG.Text = "RG";
             // 
-            // txtSalario
-            // 
-            this.txtSalario.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtSalario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSalario.DefaultText = "";
-            this.txtSalario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSalario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSalario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSalario.DisabledState.Parent = this.txtSalario;
-            this.txtSalario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSalario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSalario.FocusedState.Parent = this.txtSalario;
-            this.txtSalario.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalario.ForeColor = System.Drawing.Color.Black;
-            this.txtSalario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSalario.HoverState.Parent = this.txtSalario;
-            this.txtSalario.Location = new System.Drawing.Point(554, 413);
-            this.txtSalario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtSalario.Name = "txtSalario";
-            this.txtSalario.PasswordChar = '\0';
-            this.txtSalario.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtSalario.PlaceholderText = "";
-            this.txtSalario.SelectedText = "";
-            this.txtSalario.ShadowDecoration.Parent = this.txtSalario;
-            this.txtSalario.Size = new System.Drawing.Size(252, 35);
-            this.txtSalario.TabIndex = 13;
-            // 
             // lblSalario
             // 
             this.lblSalario.BackColor = System.Drawing.Color.Transparent;
@@ -300,33 +218,6 @@
             this.lblSalario.Size = new System.Drawing.Size(59, 23);
             this.lblSalario.TabIndex = 12;
             this.lblSalario.Text = "Salário";
-            // 
-            // txtCEP
-            // 
-            this.txtCEP.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCEP.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCEP.DefaultText = "";
-            this.txtCEP.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCEP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCEP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCEP.DisabledState.Parent = this.txtCEP;
-            this.txtCEP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCEP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCEP.FocusedState.Parent = this.txtCEP;
-            this.txtCEP.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCEP.ForeColor = System.Drawing.Color.Black;
-            this.txtCEP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCEP.HoverState.Parent = this.txtCEP;
-            this.txtCEP.Location = new System.Drawing.Point(554, 162);
-            this.txtCEP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.PasswordChar = '\0';
-            this.txtCEP.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtCEP.PlaceholderText = "";
-            this.txtCEP.SelectedText = "";
-            this.txtCEP.ShadowDecoration.Parent = this.txtCEP;
-            this.txtCEP.Size = new System.Drawing.Size(252, 35);
-            this.txtCEP.TabIndex = 15;
             // 
             // lblCEP
             // 
@@ -444,11 +335,52 @@
             this.controlFechar.TabIndex = 24;
             this.controlFechar.Click += new System.EventHandler(this.controlFechar_Click);
             // 
+            // txtRG
+            // 
+            this.txtRG.Font = new System.Drawing.Font("Helvetica", 12.75F);
+            this.txtRG.Location = new System.Drawing.Point(125, 413);
+            this.txtRG.Mask = "00,000,000-0";
+            this.txtRG.Name = "txtRG";
+            this.txtRG.Size = new System.Drawing.Size(252, 27);
+            this.txtRG.TabIndex = 25;
+            // 
+            // txtCEP
+            // 
+            this.txtCEP.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCEP.Location = new System.Drawing.Point(554, 162);
+            this.txtCEP.Mask = "00000-999";
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(252, 30);
+            this.txtCEP.TabIndex = 26;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(554, 244);
+            this.txtTelefone.Mask = "(99) 00000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(252, 30);
+            this.txtTelefone.TabIndex = 27;
+            // 
+            // txtSalario
+            // 
+            this.txtSalario.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalario.Location = new System.Drawing.Point(554, 413);
+            this.txtSalario.Mask = "$0000.00";
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(252, 30);
+            this.txtSalario.TabIndex = 29;
+            this.txtSalario.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // CadastroFuncionario
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(929, 686);
+            this.Controls.Add(this.txtSalario);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.txtCEP);
+            this.Controls.Add(this.txtRG);
             this.Controls.Add(this.controlFechar);
             this.Controls.Add(this.lblAsteristico);
             this.Controls.Add(this.lblCampoObrigatorio);
@@ -456,17 +388,13 @@
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtCEP);
             this.Controls.Add(this.lblCEP);
-            this.Controls.Add(this.txtSalario);
             this.Controls.Add(this.lblSalario);
-            this.Controls.Add(this.txtRG);
             this.Controls.Add(this.lblRG);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.lblSenha);
-            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.lblTelefone);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblId);
@@ -486,17 +414,13 @@
         private Guna.UI2.WinForms.Guna2Separator separator;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblId;
         private Guna.UI2.WinForms.Guna2TextBox txtID;
-        private Guna.UI2.WinForms.Guna2TextBox txtTelefone;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTelefone;
         private Guna.UI2.WinForms.Guna2TextBox txtSenha;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSenha;
         private Guna.UI2.WinForms.Guna2TextBox txtNome;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblNome;
-        private Guna.UI2.WinForms.Guna2TextBox txtRG;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblRG;
-        private Guna.UI2.WinForms.Guna2TextBox txtSalario;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSalario;
-        private Guna.UI2.WinForms.Guna2TextBox txtCEP;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCEP;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblEmail;
@@ -505,5 +429,9 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCampoObrigatorio;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblAsteristico;
         private Guna.UI2.WinForms.Guna2ControlBox controlFechar;
+        private System.Windows.Forms.MaskedTextBox txtRG;
+        private System.Windows.Forms.MaskedTextBox txtCEP;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.MaskedTextBox txtSalario;
     }
 }

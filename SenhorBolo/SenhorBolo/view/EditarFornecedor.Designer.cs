@@ -33,10 +33,10 @@
             this.txtCidade = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEndereco = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNome = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCNPJ = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblProduto = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtContato = new Guna.UI2.WinForms.Guna2TextBox();
+            this.comboBoxCNPJ = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // btnLimpar
@@ -142,30 +142,6 @@
             this.txtNome.Size = new System.Drawing.Size(252, 35);
             this.txtNome.TabIndex = 30;
             // 
-            // txtCNPJ
-            // 
-            this.txtCNPJ.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCNPJ.DefaultText = "";
-            this.txtCNPJ.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCNPJ.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCNPJ.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCNPJ.DisabledState.Parent = this.txtCNPJ;
-            this.txtCNPJ.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCNPJ.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCNPJ.FocusedState.Parent = this.txtCNPJ;
-            this.txtCNPJ.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCNPJ.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCNPJ.HoverState.Parent = this.txtCNPJ;
-            this.txtCNPJ.Location = new System.Drawing.Point(23, 86);
-            this.txtCNPJ.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtCNPJ.Name = "txtCNPJ";
-            this.txtCNPJ.PasswordChar = '\0';
-            this.txtCNPJ.PlaceholderText = "CNPJ";
-            this.txtCNPJ.SelectedText = "";
-            this.txtCNPJ.ShadowDecoration.Parent = this.txtCNPJ;
-            this.txtCNPJ.Size = new System.Drawing.Size(252, 35);
-            this.txtCNPJ.TabIndex = 29;
-            // 
             // guna2Separator1
             // 
             this.guna2Separator1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
@@ -209,19 +185,38 @@
             this.txtContato.Size = new System.Drawing.Size(252, 35);
             this.txtContato.TabIndex = 35;
             // 
+            // comboBoxCNPJ
+            // 
+            this.comboBoxCNPJ.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxCNPJ.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxCNPJ.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCNPJ.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxCNPJ.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxCNPJ.FocusedState.Parent = this.comboBoxCNPJ;
+            this.comboBoxCNPJ.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxCNPJ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxCNPJ.HoverState.Parent = this.comboBoxCNPJ;
+            this.comboBoxCNPJ.ItemHeight = 30;
+            this.comboBoxCNPJ.ItemsAppearance.Parent = this.comboBoxCNPJ;
+            this.comboBoxCNPJ.Location = new System.Drawing.Point(23, 86);
+            this.comboBoxCNPJ.Name = "comboBoxCNPJ";
+            this.comboBoxCNPJ.ShadowDecoration.Parent = this.comboBoxCNPJ;
+            this.comboBoxCNPJ.Size = new System.Drawing.Size(252, 36);
+            this.comboBoxCNPJ.TabIndex = 36;
+            // 
             // EditarFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(646, 337);
+            this.Controls.Add(this.comboBoxCNPJ);
             this.Controls.Add(this.txtContato);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtCNPJ);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.lblProduto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -240,9 +235,9 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCidade;
         private Guna.UI2.WinForms.Guna2TextBox txtEndereco;
         private Guna.UI2.WinForms.Guna2TextBox txtNome;
-        private Guna.UI2.WinForms.Guna2TextBox txtCNPJ;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblProduto;
         private Guna.UI2.WinForms.Guna2TextBox txtContato;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBoxCNPJ;
     }
 }

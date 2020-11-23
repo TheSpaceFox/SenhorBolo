@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="common\fornecedor.cs" />
+    <Compile Include="common\funcionario.cs" />
+    <Compile Include="dao\FornecedoresDAO.cs" />
+    <Compile Include="dao\ProdutoDAO.cs" />
+    <Compile Include="model\ControleFornecedor.cs" />
+    <Compile Include="model\ControleProdutos.cs" />
     <Compile Include="view\CadastroFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,7 +69,7 @@
     </Compile>
     <Compile Include="dao\FuncionariosDAO.cs" />
     <Compile Include="dao\LoginDAO.cs" />
-    <Compile Include="model\Controle.cs" />
+    <Compile Include="model\ControleLogin.cs" />
     <Compile Include="model\ControleFuncionarios.cs" />
     <Compile Include="view\CadastroFuncionario.cs">
       <SubType>Form</SubType>
@@ -102,11 +108,23 @@
     <Compile Include="view\Gerenciamento.Designer.cs">
       <DependentUpon>Gerenciamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\GerenciarFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\GerenciarFornecedores.Designer.cs">
+      <DependentUpon>GerenciarFornecedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\GerenciarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\GerenciarFuncionario.Designer.cs">
       <DependentUpon>GerenciarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\GerenciarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\GerenciarProduto.Designer.cs">
+      <DependentUpon>GerenciarProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Login.cs">
       <SubType>Form</SubType>
@@ -146,8 +164,14 @@
     <EmbeddedResource Include="view\Gerenciamento.resx">
       <DependentUpon>Gerenciamento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\GerenciarFornecedores.resx">
+      <DependentUpon>GerenciarFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\GerenciarFuncionario.resx">
       <DependentUpon>GerenciarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\GerenciarProduto.resx">
+      <DependentUpon>GerenciarProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

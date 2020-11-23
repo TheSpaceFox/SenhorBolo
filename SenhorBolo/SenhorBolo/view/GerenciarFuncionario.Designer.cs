@@ -161,16 +161,13 @@
             // 
             // dataGrid_Funcionario
             // 
-            this.dataGrid_Funcionario.AllowUserToAddRows = false;
-            this.dataGrid_Funcionario.AllowUserToDeleteRows = false;
-            this.dataGrid_Funcionario.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
             this.dataGrid_Funcionario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGrid_Funcionario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGrid_Funcionario.BackgroundColor = System.Drawing.Color.White;
             this.dataGrid_Funcionario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrid_Funcionario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGrid_Funcionario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGrid_Funcionario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -192,9 +189,9 @@
             this.dataGrid_Funcionario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
             this.dataGrid_Funcionario.Location = new System.Drawing.Point(80, 224);
             this.dataGrid_Funcionario.Name = "dataGrid_Funcionario";
+            this.dataGrid_Funcionario.ReadOnly = true;
             this.dataGrid_Funcionario.RowHeadersVisible = false;
             this.dataGrid_Funcionario.RowHeadersWidth = 50;
-            this.dataGrid_Funcionario.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGrid_Funcionario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGrid_Funcionario.Size = new System.Drawing.Size(768, 366);
             this.dataGrid_Funcionario.TabIndex = 9;
@@ -207,12 +204,12 @@
             this.dataGrid_Funcionario.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.dataGrid_Funcionario.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
             this.dataGrid_Funcionario.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.dataGrid_Funcionario.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGrid_Funcionario.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGrid_Funcionario.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGrid_Funcionario.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dataGrid_Funcionario.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dataGrid_Funcionario.ThemeStyle.HeaderStyle.Height = 40;
-            this.dataGrid_Funcionario.ThemeStyle.ReadOnly = false;
+            this.dataGrid_Funcionario.ThemeStyle.ReadOnly = true;
             this.dataGrid_Funcionario.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.dataGrid_Funcionario.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGrid_Funcionario.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Helvetica", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -220,6 +217,7 @@
             this.dataGrid_Funcionario.ThemeStyle.RowsStyle.Height = 22;
             this.dataGrid_Funcionario.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
             this.dataGrid_Funcionario.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGrid_Funcionario.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGrid_Funcionario_CellMouseClick);
             // 
             // btnEditar
             // 

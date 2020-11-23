@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -9,24 +10,19 @@ namespace SenhorBolo.dao
 {
     class LoginDAO : Conexao
     {
-        public bool Acesso = false;
+        public bool Acesso = false; //Informa se o login é valido
         public bool Acessar(int userType, string login, String senha)
         {
             try
             {
                 Conectar();
-                if (userType == 0)
-                {
-                    Cmd = new SqlCommand("select * from tblAdministrador where idAdministrador = @login and senhaADM = @senha", Con);
-                }
-                else
-                {
-                    Cmd = new SqlCommand("select * from tblFuncionarios where idFuncionario = @login and senhaFunc = @senha", Con);
-                }
+                Cmd = new SqlCommand("AcessoSistema", Con); //Procedimento que retorna o login
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.AddWithValue("@userType", userType);
                 Cmd.Parameters.AddWithValue("@login", login);
                 Cmd.Parameters.AddWithValue("@senha", senha);
                 Dr = Cmd.ExecuteReader();
-                if (Dr.HasRows)
+                if (Dr.HasRows) //Caso seja o sql tenha retorno, o valor é tido como valido
                 {
                     Acesso = true;
                 }

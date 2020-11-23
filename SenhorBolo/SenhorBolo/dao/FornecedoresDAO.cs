@@ -11,33 +11,9 @@ namespace SenhorBolo.dao
     class FornecedoresDAO : Conexao
     {
         DataTable Dt = new DataTable();
-        public DataTable pesquisaTabela(string pesquisa, string campo)
-        {
-            try
-            {
-                Conectar();
-                Cmd = new SqlCommand("PesquisarFornecedores", Con);
-                Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.Parameters.AddWithValue("@Campo", campo);
-                Cmd.Parameters.AddWithValue("@Pesquisa", pesquisa);
-
-                Dr = Cmd.ExecuteReader();
-                Dt.Load(Dr);
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Erro ao pesquisar: " + e.Message);
-            }
-            finally
-            {
-                Desconectar();
-            }
-            return Dt;
-        }
-
         public DataTable fornecedoresCadastros()
         {
-            try 
+            try
             {
                 Conectar();
                 Cmd = new SqlCommand("ListarForncedores", Con);
@@ -73,12 +49,11 @@ namespace SenhorBolo.dao
             {
                 throw new Exception("Erro ao cadastrar:" + e.Message);
             }
-            finally 
+            finally
             {
                 Desconectar();
             }
 
         }
     }
-        
 }

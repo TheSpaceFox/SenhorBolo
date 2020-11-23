@@ -18,7 +18,7 @@ namespace SenhorBolo.view
             InitializeComponent();
         }
 
-        ControleFornecedores fornecedor = new ControleFornecedores();
+        ControleFornecedor fornecedor = new ControleFornecedor();
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {

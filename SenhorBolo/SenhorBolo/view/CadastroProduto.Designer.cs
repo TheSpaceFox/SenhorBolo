@@ -108,6 +108,7 @@
             this.btnRegistrar.Size = new System.Drawing.Size(145, 36);
             this.btnRegistrar.TabIndex = 43;
             this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtPreco
             // 
@@ -173,7 +174,6 @@
             this.txtDescricao.ShadowDecoration.Parent = this.txtDescricao;
             this.txtDescricao.Size = new System.Drawing.Size(252, 35);
             this.txtDescricao.TabIndex = 32;
-            this.txtDescricao.UseSystemPasswordChar = true;
             // 
             // lblDescricao
             // 

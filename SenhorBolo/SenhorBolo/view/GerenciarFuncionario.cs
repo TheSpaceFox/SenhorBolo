@@ -19,9 +19,11 @@ namespace SenhorBolo
         public GerenciarFuncionario()
         {
             InitializeComponent();
-            dataGrid_Funcionario.DataSource = funcionarios.funcionariosCadastrados();
+            dt = funcionarios.funcionariosCadastrados();
+            dataGrid_Funcionario.DataSource = dt;
         }
 
+        DataTable dt = new DataTable();
         
         private void controlFechar_Click(object sender, EventArgs e)
         {
@@ -36,10 +38,35 @@ namespace SenhorBolo
 
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(comboBox_Pesquisa.SelectedIndex.ToString());
-            MessageBox.Show(txtPesquisa.Text);
-            limparDataGrid();
-            dataGrid_Funcionario.DataSource = funcionarios.Pesquisa(txtPesquisa.Text, comboBox_Pesquisa.SelectedIndex);
+            DataView data = dt.DefaultView;
+            switch(comboBox_Pesquisa.SelectedIndex)
+            {
+                case 0:
+                    data.RowFilter = string.Format("CONVERT(idFuncionario, 'System.String') like '%{0}%'", txtPesquisa.Text);
+                    break;
+                case 1:
+                    data.RowFilter = string.Format("nomeFunc like '%{0}%'", txtPesquisa.Text);
+                    break;
+                case 2:
+                    data.RowFilter = string.Format("senhaFunc like '%{0}%'", txtPesquisa.Text);
+                    break;
+                case 3:
+                    data.RowFilter = string.Format("RG like '%{0}%'", txtPesquisa.Text);
+                    break;
+                case 4:
+                    data.RowFilter = string.Format("CONVERT(salario, 'System.String') like '%{0}%'", txtPesquisa.Text);
+                    break;
+                case 5:
+                    data.RowFilter = string.Format("email like '%{0}%'", txtPesquisa.Text);
+                    break;
+                case 6:
+                    data.RowFilter = string.Format("telefone like '%{0}%'", txtPesquisa.Text);
+                    break;
+                case 7:
+                    data.RowFilter = string.Format("CEP like '%{0}%'", txtPesquisa.Text);
+                    break;
+            }
+            dataGrid_Funcionario.DataSource = data.ToTable(); ;
         }
 
         private void limparDataGrid()
@@ -48,6 +75,12 @@ namespace SenhorBolo
             {
                 dataGrid_Funcionario.Rows[i].DataGridView.Columns.Clear();
             }
+        }
+
+        private void dataGrid_Funcionario_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int linha = dataGrid_Funcionario.CurrentRow.Index;
+            MessageBox.Show("Cliquei no dtgrid na linha " + Convert.ToString(linha), "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
     }
 }

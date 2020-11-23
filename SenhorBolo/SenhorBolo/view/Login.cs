@@ -21,23 +21,15 @@ namespace SenhorBolo {
         int userType = 0;
         private void comboLogin_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (comboLogin.SelectedIndex)
-            {
-                case 0:
-                    userType = 0;
-                    break;
-                case 1:
-                    userType = 1;
-                    break;
-            }
+            userType = comboLogin.SelectedIndex;
         }
 
         private void login()
-        {
-            Controle controle = new Controle();
+        {    
+            ControleLogin controle = new ControleLogin(); //Instanciamento de objeto para verificar login
             controle.Acessar(userType, txtLogin.Text, txtSenha.Text);
 
-            if (controle.Acesso)
+            if (controle.Acesso) //Verifica se o login é valido, e abre o form de acordo com o usuário
             {
                 this.Close();
                 if (userType == 1)
@@ -51,7 +43,14 @@ namespace SenhorBolo {
                     gerenciamento.Show();
                 }
             }
+            else
+            {
+                MessageBox.Show("Login inválido, tente novamente", "Erro de Acesso"); //Mensagem de erro
+                txtLogin.Text = null;
+                txtSenha.Text = null;
+            }
         }
+
         private void btnAcessar_Click(object sender, EventArgs e)
         {
             login();
@@ -59,7 +58,7 @@ namespace SenhorBolo {
 
         private void Login_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter) //Login com a tecla enter
             {
                 login();
             }

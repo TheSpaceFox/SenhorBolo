@@ -30,12 +30,12 @@
         {
             this.lblProduto = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDescricao = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtValor = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMaisValia = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
             this.btnLimpar = new Guna.UI2.WinForms.Guna2Button();
+            this.comboBoxID = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // lblProduto
@@ -56,30 +56,6 @@
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(611, 10);
             this.guna2Separator1.TabIndex = 15;
-            // 
-            // txtID
-            // 
-            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtID.DefaultText = "";
-            this.txtID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtID.DisabledState.Parent = this.txtID;
-            this.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtID.FocusedState.Parent = this.txtID;
-            this.txtID.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtID.HoverState.Parent = this.txtID;
-            this.txtID.Location = new System.Drawing.Point(25, 94);
-            this.txtID.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtID.Name = "txtID";
-            this.txtID.PasswordChar = '\0';
-            this.txtID.PlaceholderText = "ID";
-            this.txtID.SelectedText = "";
-            this.txtID.ShadowDecoration.Parent = this.txtID;
-            this.txtID.Size = new System.Drawing.Size(252, 35);
-            this.txtID.TabIndex = 16;
             // 
             // txtDescricao
             // 
@@ -184,23 +160,42 @@
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
+            // comboBoxID
+            // 
+            this.comboBoxID.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxID.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxID.FocusedState.Parent = this.comboBoxID;
+            this.comboBoxID.Font = new System.Drawing.Font("Helvetica", 14.25F);
+            this.comboBoxID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxID.HoverState.Parent = this.comboBoxID;
+            this.comboBoxID.ItemHeight = 30;
+            this.comboBoxID.ItemsAppearance.Parent = this.comboBoxID;
+            this.comboBoxID.Location = new System.Drawing.Point(25, 94);
+            this.comboBoxID.Name = "comboBoxID";
+            this.comboBoxID.ShadowDecoration.Parent = this.comboBoxID;
+            this.comboBoxID.Size = new System.Drawing.Size(252, 36);
+            this.comboBoxID.TabIndex = 27;
+            // 
             // EditarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(646, 289);
+            this.Controls.Add(this.comboBoxID);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txtMaisValia);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.txtDescricao);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.lblProduto);
             this.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditarProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarProduto";
@@ -213,11 +208,11 @@
 
         private Guna.UI2.WinForms.Guna2HtmlLabel lblProduto;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private Guna.UI2.WinForms.Guna2TextBox txtID;
         private Guna.UI2.WinForms.Guna2TextBox txtDescricao;
         private Guna.UI2.WinForms.Guna2TextBox txtValor;
         private Guna.UI2.WinForms.Guna2TextBox txtMaisValia;
         private Guna.UI2.WinForms.Guna2Button btnEditar;
         private Guna.UI2.WinForms.Guna2Button btnLimpar;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBoxID;
     }
 }

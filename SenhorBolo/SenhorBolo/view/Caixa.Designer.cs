@@ -28,7 +28,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Caixa));
-            this.imagemProduto = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblCodigoBarras = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtCodigo = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtQuantidade = new Guna.UI2.WinForms.Guna2TextBox();
@@ -44,40 +43,28 @@
             this.txtTroco = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTroco = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.datagridListaProdutos = new System.Windows.Forms.DataGridView();
-            this.lblListaProdutos = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panelListaProdutos = new Guna.UI2.WinForms.Guna2Panel();
             this.numItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qtde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vlrUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblListaProdutos = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panelListaProdutos = new Guna.UI2.WinForms.Guna2Panel();
             this.panelHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblNomeFuncionario = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblHorario = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblNomeFuncionario = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.relógio = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.imagemProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridListaProdutos)).BeginInit();
             this.panelListaProdutos.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
-            // imagemProduto
-            // 
-            this.imagemProduto.Image = global::SenhorBolo.Properties.Resources.randomblock;
-            this.imagemProduto.Location = new System.Drawing.Point(24, 125);
-            this.imagemProduto.Name = "imagemProduto";
-            this.imagemProduto.ShadowDecoration.Parent = this.imagemProduto;
-            this.imagemProduto.Size = new System.Drawing.Size(363, 251);
-            this.imagemProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imagemProduto.TabIndex = 1;
-            this.imagemProduto.TabStop = false;
-            // 
             // lblCodigoBarras
             // 
             this.lblCodigoBarras.BackColor = System.Drawing.Color.Transparent;
             this.lblCodigoBarras.Font = new System.Drawing.Font("Helvetica", 15F, System.Drawing.FontStyle.Bold);
-            this.lblCodigoBarras.Location = new System.Drawing.Point(24, 382);
+            this.lblCodigoBarras.Location = new System.Drawing.Point(34, 162);
             this.lblCodigoBarras.Name = "lblCodigoBarras";
             this.lblCodigoBarras.Size = new System.Drawing.Size(169, 26);
             this.lblCodigoBarras.TabIndex = 5;
@@ -98,7 +85,7 @@
             this.txtCodigo.ForeColor = System.Drawing.Color.Black;
             this.txtCodigo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCodigo.HoverState.Parent = this.txtCodigo;
-            this.txtCodigo.Location = new System.Drawing.Point(24, 416);
+            this.txtCodigo.Location = new System.Drawing.Point(34, 196);
             this.txtCodigo.Margin = new System.Windows.Forms.Padding(5);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.PasswordChar = '\0';
@@ -124,7 +111,7 @@
             this.txtQuantidade.ForeColor = System.Drawing.Color.Black;
             this.txtQuantidade.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtQuantidade.HoverState.Parent = this.txtQuantidade;
-            this.txtQuantidade.Location = new System.Drawing.Point(24, 506);
+            this.txtQuantidade.Location = new System.Drawing.Point(34, 286);
             this.txtQuantidade.Margin = new System.Windows.Forms.Padding(5);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.PasswordChar = '\0';
@@ -139,7 +126,7 @@
             // 
             this.lblQuantidade.BackColor = System.Drawing.Color.Transparent;
             this.lblQuantidade.Font = new System.Drawing.Font("Helvetica", 15F, System.Drawing.FontStyle.Bold);
-            this.lblQuantidade.Location = new System.Drawing.Point(24, 472);
+            this.lblQuantidade.Location = new System.Drawing.Point(34, 252);
             this.lblQuantidade.Name = "lblQuantidade";
             this.lblQuantidade.Size = new System.Drawing.Size(114, 26);
             this.lblQuantidade.TabIndex = 7;
@@ -160,7 +147,7 @@
             this.txtPrecoUnitario.ForeColor = System.Drawing.Color.Black;
             this.txtPrecoUnitario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrecoUnitario.HoverState.Parent = this.txtPrecoUnitario;
-            this.txtPrecoUnitario.Location = new System.Drawing.Point(24, 596);
+            this.txtPrecoUnitario.Location = new System.Drawing.Point(34, 376);
             this.txtPrecoUnitario.Margin = new System.Windows.Forms.Padding(5);
             this.txtPrecoUnitario.Name = "txtPrecoUnitario";
             this.txtPrecoUnitario.PasswordChar = '\0';
@@ -175,7 +162,7 @@
             // 
             this.lblPrecoUnitario.BackColor = System.Drawing.Color.Transparent;
             this.lblPrecoUnitario.Font = new System.Drawing.Font("Helvetica", 15F, System.Drawing.FontStyle.Bold);
-            this.lblPrecoUnitario.Location = new System.Drawing.Point(24, 562);
+            this.lblPrecoUnitario.Location = new System.Drawing.Point(34, 342);
             this.lblPrecoUnitario.Name = "lblPrecoUnitario";
             this.lblPrecoUnitario.Size = new System.Drawing.Size(142, 26);
             this.lblPrecoUnitario.TabIndex = 9;
@@ -196,7 +183,7 @@
             this.txtTotalItem.ForeColor = System.Drawing.Color.Black;
             this.txtTotalItem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalItem.HoverState.Parent = this.txtTotalItem;
-            this.txtTotalItem.Location = new System.Drawing.Point(24, 686);
+            this.txtTotalItem.Location = new System.Drawing.Point(34, 466);
             this.txtTotalItem.Margin = new System.Windows.Forms.Padding(5);
             this.txtTotalItem.Name = "txtTotalItem";
             this.txtTotalItem.PasswordChar = '\0';
@@ -211,7 +198,7 @@
             // 
             this.lblTotalItem.BackColor = System.Drawing.Color.Transparent;
             this.lblTotalItem.Font = new System.Drawing.Font("Helvetica", 15F, System.Drawing.FontStyle.Bold);
-            this.lblTotalItem.Location = new System.Drawing.Point(24, 652);
+            this.lblTotalItem.Location = new System.Drawing.Point(34, 432);
             this.lblTotalItem.Name = "lblTotalItem";
             this.lblTotalItem.Size = new System.Drawing.Size(101, 26);
             this.lblTotalItem.TabIndex = 11;
@@ -341,27 +328,6 @@
             this.datagridListaProdutos.Size = new System.Drawing.Size(711, 385);
             this.datagridListaProdutos.TabIndex = 19;
             // 
-            // lblListaProdutos
-            // 
-            this.lblListaProdutos.BackColor = System.Drawing.Color.Transparent;
-            this.lblListaProdutos.Font = new System.Drawing.Font("Helvetica", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblListaProdutos.ForeColor = System.Drawing.Color.White;
-            this.lblListaProdutos.Location = new System.Drawing.Point(3, 12);
-            this.lblListaProdutos.Name = "lblListaProdutos";
-            this.lblListaProdutos.Size = new System.Drawing.Size(177, 26);
-            this.lblListaProdutos.TabIndex = 21;
-            this.lblListaProdutos.Text = " Lista de produtos";
-            // 
-            // panelListaProdutos
-            // 
-            this.panelListaProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(186)))), ((int)(((byte)(179)))));
-            this.panelListaProdutos.Controls.Add(this.lblListaProdutos);
-            this.panelListaProdutos.Location = new System.Drawing.Point(444, 125);
-            this.panelListaProdutos.Name = "panelListaProdutos";
-            this.panelListaProdutos.ShadowDecoration.Parent = this.panelListaProdutos;
-            this.panelListaProdutos.Size = new System.Drawing.Size(711, 46);
-            this.panelListaProdutos.TabIndex = 22;
-            // 
             // numItem
             // 
             this.numItem.HeaderText = "Nº Item";
@@ -407,6 +373,27 @@
             this.total.ReadOnly = true;
             this.total.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
+            // lblListaProdutos
+            // 
+            this.lblListaProdutos.BackColor = System.Drawing.Color.Transparent;
+            this.lblListaProdutos.Font = new System.Drawing.Font("Helvetica", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListaProdutos.ForeColor = System.Drawing.Color.White;
+            this.lblListaProdutos.Location = new System.Drawing.Point(3, 12);
+            this.lblListaProdutos.Name = "lblListaProdutos";
+            this.lblListaProdutos.Size = new System.Drawing.Size(177, 26);
+            this.lblListaProdutos.TabIndex = 21;
+            this.lblListaProdutos.Text = " Lista de produtos";
+            // 
+            // panelListaProdutos
+            // 
+            this.panelListaProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(186)))), ((int)(((byte)(179)))));
+            this.panelListaProdutos.Controls.Add(this.lblListaProdutos);
+            this.panelListaProdutos.Location = new System.Drawing.Point(444, 125);
+            this.panelListaProdutos.Name = "panelListaProdutos";
+            this.panelListaProdutos.ShadowDecoration.Parent = this.panelListaProdutos;
+            this.panelListaProdutos.Size = new System.Drawing.Size(711, 46);
+            this.panelListaProdutos.TabIndex = 22;
+            // 
             // panelHeader
             // 
             this.panelHeader.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelHeader.BackgroundImage")));
@@ -419,17 +406,6 @@
             this.panelHeader.Size = new System.Drawing.Size(1180, 92);
             this.panelHeader.TabIndex = 24;
             // 
-            // lblNomeFuncionario
-            // 
-            this.lblNomeFuncionario.BackColor = System.Drawing.Color.Transparent;
-            this.lblNomeFuncionario.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeFuncionario.ForeColor = System.Drawing.Color.White;
-            this.lblNomeFuncionario.Location = new System.Drawing.Point(986, 22);
-            this.lblNomeFuncionario.Name = "lblNomeFuncionario";
-            this.lblNomeFuncionario.Size = new System.Drawing.Size(149, 21);
-            this.lblNomeFuncionario.TabIndex = 0;
-            this.lblNomeFuncionario.Text = "Edson Koshikumo";
-            // 
             // lblHorario
             // 
             this.lblHorario.BackColor = System.Drawing.Color.Transparent;
@@ -440,6 +416,17 @@
             this.lblHorario.Size = new System.Drawing.Size(67, 21);
             this.lblHorario.TabIndex = 1;
             this.lblHorario.Text = "19:51:55";
+            // 
+            // lblNomeFuncionario
+            // 
+            this.lblNomeFuncionario.BackColor = System.Drawing.Color.Transparent;
+            this.lblNomeFuncionario.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeFuncionario.ForeColor = System.Drawing.Color.White;
+            this.lblNomeFuncionario.Location = new System.Drawing.Point(986, 22);
+            this.lblNomeFuncionario.Name = "lblNomeFuncionario";
+            this.lblNomeFuncionario.Size = new System.Drawing.Size(149, 21);
+            this.lblNomeFuncionario.TabIndex = 0;
+            this.lblNomeFuncionario.Text = "Edson Koshikumo";
             // 
             // relógio
             // 
@@ -470,14 +457,12 @@
             this.Controls.Add(this.lblQuantidade);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigoBarras);
-            this.Controls.Add(this.imagemProduto);
             this.Font = new System.Drawing.Font("Helvetica", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Caixa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Caixa";
-            ((System.ComponentModel.ISupportInitialize)(this.imagemProduto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datagridListaProdutos)).EndInit();
             this.panelListaProdutos.ResumeLayout(false);
             this.panelListaProdutos.PerformLayout();
@@ -489,7 +474,6 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2PictureBox imagemProduto;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCodigoBarras;
         private Guna.UI2.WinForms.Guna2TextBox txtCodigo;
         private Guna.UI2.WinForms.Guna2TextBox txtQuantidade;

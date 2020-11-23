@@ -7,7 +7,7 @@ using SenhorBolo.dao;
 
 namespace SenhorBolo.model
 {
-    public class Controle
+    public class ControleLogin
     {
         public bool Acesso;
 

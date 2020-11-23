@@ -16,6 +16,7 @@ namespace SenhorBolo
         public CadastroFuncionario()
         {
             InitializeComponent();
+            ControlHeightWidth();
         }
 
         ControleFuncionarios funcionario = new ControleFuncionarios();
@@ -38,6 +39,7 @@ namespace SenhorBolo
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
+            lblCadastroFuncionarios.Text = txtRG.Text;
             limparTexto();
         }
 
@@ -51,6 +53,18 @@ namespace SenhorBolo
             txtSalario.Text = null;
             txtSenha.Text = null;
             txtTelefone.Text = null;
+        }
+
+        private void ControlHeightWidth()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if ((c.GetType() == typeof(MaskedTextBox)))
+                {
+                    ((MaskedTextBox)c).AutoSize = false;
+                    c.Size = new Size(252, 35);
+                }
+            }
         }
     }
 }

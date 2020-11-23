@@ -30,17 +30,16 @@
         {
             this.lblEditarFuncionarios = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSenha = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtRG = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCEP = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNome = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtCPF = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSalario = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTelefone = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLimpar = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditar = new Guna.UI2.WinForms.Guna2Button();
+            this.comboBoxID = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
             // 
             // lblEditarFuncionarios
@@ -52,7 +51,6 @@
             this.lblEditarFuncionarios.Size = new System.Drawing.Size(260, 35);
             this.lblEditarFuncionarios.TabIndex = 0;
             this.lblEditarFuncionarios.Text = "Editar funcionários";
-            this.lblEditarFuncionarios.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
             // 
             // guna2Separator1
             // 
@@ -62,30 +60,6 @@
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(611, 10);
             this.guna2Separator1.TabIndex = 1;
-            // 
-            // txtID
-            // 
-            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtID.DefaultText = "";
-            this.txtID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtID.DisabledState.Parent = this.txtID;
-            this.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtID.FocusedState.Parent = this.txtID;
-            this.txtID.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtID.HoverState.Parent = this.txtID;
-            this.txtID.Location = new System.Drawing.Point(86, 93);
-            this.txtID.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtID.Name = "txtID";
-            this.txtID.PasswordChar = '\0';
-            this.txtID.PlaceholderText = "ID";
-            this.txtID.SelectedText = "";
-            this.txtID.ShadowDecoration.Parent = this.txtID;
-            this.txtID.Size = new System.Drawing.Size(252, 35);
-            this.txtID.TabIndex = 2;
             // 
             // txtSenha
             // 
@@ -207,30 +181,6 @@
             this.txtEmail.Size = new System.Drawing.Size(252, 35);
             this.txtEmail.TabIndex = 7;
             // 
-            // txtCPF
-            // 
-            this.txtCPF.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCPF.DefaultText = "";
-            this.txtCPF.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtCPF.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtCPF.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCPF.DisabledState.Parent = this.txtCPF;
-            this.txtCPF.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCPF.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCPF.FocusedState.Parent = this.txtCPF;
-            this.txtCPF.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCPF.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCPF.HoverState.Parent = this.txtCPF;
-            this.txtCPF.Location = new System.Drawing.Point(86, 313);
-            this.txtCPF.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.PasswordChar = '\0';
-            this.txtCPF.PlaceholderText = "CPF";
-            this.txtCPF.SelectedText = "";
-            this.txtCPF.ShadowDecoration.Parent = this.txtCPF;
-            this.txtCPF.Size = new System.Drawing.Size(252, 35);
-            this.txtCPF.TabIndex = 8;
-            // 
             // txtSalario
             // 
             this.txtSalario.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -309,6 +259,27 @@
             this.btnEditar.Size = new System.Drawing.Size(145, 36);
             this.btnEditar.TabIndex = 12;
             this.btnEditar.Text = "Salvar alterações";
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // comboBoxID
+            // 
+            this.comboBoxID.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxID.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxID.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxID.FocusedState.Parent = this.comboBoxID;
+            this.comboBoxID.Font = new System.Drawing.Font("Helvetica", 14.25F);
+            this.comboBoxID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxID.HoverState.Parent = this.comboBoxID;
+            this.comboBoxID.ItemHeight = 30;
+            this.comboBoxID.ItemsAppearance.Parent = this.comboBoxID;
+            this.comboBoxID.Location = new System.Drawing.Point(86, 93);
+            this.comboBoxID.Name = "comboBoxID";
+            this.comboBoxID.ShadowDecoration.Parent = this.comboBoxID;
+            this.comboBoxID.Size = new System.Drawing.Size(252, 36);
+            this.comboBoxID.TabIndex = 14;
+            this.comboBoxID.SelectedIndexChanged += new System.EventHandler(this.comboBoxID_SelectedIndexChanged);
             // 
             // EditarFuncionario
             // 
@@ -316,17 +287,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 462);
+            this.Controls.Add(this.comboBoxID);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtSalario);
-            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtCEP);
             this.Controls.Add(this.txtRG);
             this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.lblEditarFuncionarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -342,16 +312,15 @@
 
         private Guna.UI2.WinForms.Guna2HtmlLabel lblEditarFuncionarios;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private Guna.UI2.WinForms.Guna2TextBox txtID;
         private Guna.UI2.WinForms.Guna2TextBox txtSenha;
         private Guna.UI2.WinForms.Guna2TextBox txtRG;
         private Guna.UI2.WinForms.Guna2TextBox txtCEP;
         private Guna.UI2.WinForms.Guna2TextBox txtNome;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private Guna.UI2.WinForms.Guna2TextBox txtCPF;
         private Guna.UI2.WinForms.Guna2TextBox txtSalario;
         private Guna.UI2.WinForms.Guna2TextBox txtTelefone;
         private Guna.UI2.WinForms.Guna2Button btnLimpar;
         private Guna.UI2.WinForms.Guna2Button btnEditar;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBoxID;
     }
 }

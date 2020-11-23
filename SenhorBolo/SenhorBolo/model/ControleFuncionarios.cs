@@ -10,46 +10,15 @@ namespace SenhorBolo.model
 {
     public class ControleFuncionarios
     {
-        public int ID;
-        public string Campo;
-        public bool Ednaldo;
+
         DataTable funcionarios = new DataTable();
         FuncionariosDAO gerenciar = new FuncionariosDAO();
 
-        public DataTable Pesquisa(string pesquisa, int comboBox)
+        public DataTable getFuncionarios()
         {
-            switch (comboBox)
-            {
-                case 0:
-                    Campo = "idFuncionario";
-                    break;
-                case 1:
-                    Campo = "nomeFunc";
-                    break;
-                case 2:
-                    Campo = "senhaFunc";
-                    break;
-                case 3:
-                    Campo = "RG";
-                    break;
-                case 4:
-                    Campo = "salario";
-                    break;
-                case 5:
-                    Campo = "email";
-                    break;
-                case 6:
-                    Campo = "telefone";
-                    break;
-                case 7:
-                    Campo = "CEP";
-                    break;
-            }
-            Campo = "salario";
-            funcionarios = gerenciar.pesquisaTabela(pesquisa, Campo);
+            funcionarios = gerenciar.getFuncionarios();
             return funcionarios;
         }
-
         public void Cadastrar(int id, string nome, string senha, string rg, double salario, string email, string telefone, string cep)
         {
             gerenciar.Cadastrar(id, nome, senha, rg, salario, email, telefone, cep);
@@ -59,6 +28,18 @@ namespace SenhorBolo.model
         {
             funcionarios = gerenciar.funcionariosCadastrados();
             return funcionarios;
+        }
+
+        public void setFuncionario(int idFuncionario)
+        {
+            gerenciar.setFuncionario(idFuncionario);
+        }
+
+        public bool updateFuncionario()
+        {
+            bool funcionou;
+            funcionou = gerenciar.updateFuncionario();
+            return funcionou;
         }
     }
 }
