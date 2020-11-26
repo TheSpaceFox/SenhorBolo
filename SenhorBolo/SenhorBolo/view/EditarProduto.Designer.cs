@@ -178,6 +178,7 @@
             this.comboBoxID.ShadowDecoration.Parent = this.comboBoxID;
             this.comboBoxID.Size = new System.Drawing.Size(252, 36);
             this.comboBoxID.TabIndex = 27;
+            this.comboBoxID.SelectedIndexChanged += new System.EventHandler(this.comboBoxID_SelectedIndexChanged);
             // 
             // EditarProduto
             // 

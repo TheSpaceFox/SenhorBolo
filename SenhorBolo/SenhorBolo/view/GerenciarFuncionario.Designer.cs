@@ -217,7 +217,6 @@
             this.dataGrid_Funcionario.ThemeStyle.RowsStyle.Height = 22;
             this.dataGrid_Funcionario.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
             this.dataGrid_Funcionario.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGrid_Funcionario.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGrid_Funcionario_CellMouseClick);
             // 
             // btnEditar
             // 
@@ -249,6 +248,7 @@
             this.btnExcluir.Size = new System.Drawing.Size(145, 36);
             this.btnExcluir.TabIndex = 11;
             this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // controlFechar
             // 

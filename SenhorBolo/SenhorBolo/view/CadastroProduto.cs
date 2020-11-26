@@ -16,6 +16,7 @@ namespace SenhorBolo
         public CadastroProduto()
         {
             InitializeComponent();
+            ControlHeightWidth();
         }
 
         ControleProdutos produto = new ControleProdutos();
@@ -44,6 +45,18 @@ namespace SenhorBolo
         private void btnLimpar_Click(object sender, EventArgs e)
         {
             limparTexto();
+        }
+
+        private void ControlHeightWidth()
+        {
+            foreach (Control c in this.Controls)
+            {
+                if ((c.GetType() == typeof(MaskedTextBox)))
+                {
+                    ((MaskedTextBox)c).AutoSize = false;
+                    c.Size = new Size(252, 35);
+                }
+            }
         }
     }
 }

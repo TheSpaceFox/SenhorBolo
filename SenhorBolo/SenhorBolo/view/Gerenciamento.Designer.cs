@@ -45,8 +45,8 @@
             this.btnGerenciarFuncionarios = new Guna.UI2.WinForms.Guna2Button();
             this.btnCadastroFuncionario = new Guna.UI2.WinForms.Guna2Button();
             this.btnFuncionarios = new Guna.UI2.WinForms.Guna2Button();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.painelSideBar.SuspendLayout();
             this.painelDropFornecedor.SuspendLayout();
             this.painelDropProduto.SuspendLayout();
@@ -148,7 +148,7 @@
             this.btnGerenciarFornecedores.ShadowDecoration.Parent = this.btnGerenciarFornecedores;
             this.btnGerenciarFornecedores.Size = new System.Drawing.Size(272, 50);
             this.btnGerenciarFornecedores.TabIndex = 1;
-            this.btnGerenciarFornecedores.Text = "Cadastrar Fornecedores";
+            this.btnGerenciarFornecedores.Text = "Gerenciar";
             this.btnGerenciarFornecedores.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnGerenciarFornecedores.Click += new System.EventHandler(this.btnGerenciarFornecedores_Click);
             // 
@@ -159,7 +159,7 @@
             this.btnCadastrarFornecedor.CustomImages.Parent = this.btnCadastrarFornecedor;
             this.btnCadastrarFornecedor.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCadastrarFornecedor.FillColor = System.Drawing.Color.Empty;
-            this.btnCadastrarFornecedor.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarFornecedor.Font = new System.Drawing.Font("Helvetica", 14.25F);
             this.btnCadastrarFornecedor.ForeColor = System.Drawing.Color.White;
             this.btnCadastrarFornecedor.HoverState.Parent = this.btnCadastrarFornecedor;
             this.btnCadastrarFornecedor.Location = new System.Drawing.Point(0, 0);
@@ -333,14 +333,6 @@
             this.btnFuncionarios.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
             // 
-            // panelChildForm
-            // 
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(289, 0);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(927, 696);
-            this.panelChildForm.TabIndex = 2;
-            // 
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -351,6 +343,14 @@
             this.guna2PictureBox1.Size = new System.Drawing.Size(272, 233);
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(289, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(927, 696);
+            this.panelChildForm.TabIndex = 2;
             // 
             // Gerenciamento
             // 

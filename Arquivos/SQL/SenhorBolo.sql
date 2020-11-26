@@ -1,11 +1,6 @@
 CREATE DATABASE SrBolo
 DROP DATABASE SrBolo
 USE SrBolo
-USE SrBolor
-
-
-ALTER TABLE tblFuncionarios
-ADD salario FLOAT;
 
 CREATE TABLE tblFuncionarios(
 	idFuncionario INT PRIMARY KEY,
@@ -28,15 +23,15 @@ CREATE TABLE tblVenda(
 CREATE TABLE tblProduto(
 	idProduto INT PRIMARY KEY,
 	descProduto VARCHAR (30),
-	precoProduto NUMERIC (5,2),
-	maisValia NUMERIC(5,2)
+	precoProduto FLOAT,
+	maisValia FLOAT
 )
 
 CREATE TABLE tblDetalheVenda(
 	idVenda INT FOREIGN KEY REFERENCES tblVenda (idVenda),
 	idProduto INT FOREIGN KEY REFERENCES tblProduto (idProduto),
 	quantidade INT,
-	valorTotal NUMERIC (6,2)
+	valorTotal FLOAT
 )
 
 CREATE TABLE tblAdministrador (
@@ -107,9 +102,23 @@ insert into tblFornecedor values
 ('28.707.298/0001-93', 'Petrobras', '14676-8498', '2ª Travessa Sudão', 'Feira de Santana'),
 ('48.661.629/0001-09', 'Renner', '31914-8238', 'Travessa Menino Marcelo', 'Maceió')
 
+insert into tblVenda values
+(1, '25/11/2020', 1)
+
+select * from tblVenda
+
+insert into tblDetalheVenda values 
+(1, 1, 5, 100),
+(1, 2, 4, 80),
+(1, 3, 3, 60),
+(1, 4, 2, 40),
+(1, 5, 1, 20)
+
+
 -- Procedimentos
 
--- Login
+-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> LOGIN <<<<<<<<<<<<<<<<<<<<<<<<<<<
+
 CREATE PROC AcessoSistema
 	@userType INT,
 	@login INT,
@@ -122,16 +131,17 @@ BEGIN
 		SELECT * FROM tblFuncionarios WHERE idFuncionario = @login and senhaFunc = @senha
 END
 
-exec AcessoSistema 0, 6, 1234
 
--- Listar Funcionarios
+-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> FUNCIONARIO <<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+-- Listar Funcionarios, usado para mandar os funcionários para o DtGrid 
 
 create proc ListarFuncionarios
 as
 Select * from tblFuncionarios 
 go
 
--- Listar Funcionário
+-- Listar Funcionário, usado para pegar os valores do funcionário na edição 
 
 CREATE PROC ListarFuncionario
 	@idFuncionario INT
@@ -139,9 +149,7 @@ CREATE PROC ListarFuncionario
 		SELECT * FROM tblFuncionarios WHERE idFuncionario = @idFuncionario
 	GO
 
-exec ListarFuncionario 1
-
--- Cadastrar Funcionarios
+-- Cadastrar Funcionarios, o próprio nome diz
 CREATE PROC CadastrarFuncionarios
 	@idFuncionario INT,
 	@nomeFunc VARCHAR(50),
@@ -155,42 +163,7 @@ AS
 INSERT INTO tblFuncionarios VALUES (@idFuncionario, @nomeFunc, @senhaFunc, @RG, @SALARIO, @EMAIL, @TELEFONE, @CEP)
 GO
 
--- Listar Fornecedores
-
-CREATE PROC ListarFornecedores
-as
-Select * from tblFornecedor
-go
-
--- Cadastrar Fornecedores
-
-Create proc CadastrarFornecedores
-    @cnpj varchar(18),
-    @descFor varchar(30),
-    @contato varchar(30),
-    @endereco varchar(50),
-    @cidade varchar(25)
-as 
-insert into tblFornecedor values (@cnpj, @descFor, @contato, @endereco, @cidade)
-go
-
--- Listar Produtos 
-
-CREATE PROC ListarProdutos
-as
-Select * from tblProduto
-go
-
--- Cadastrar Produtos
-
-CREATE PROC CadastrarProdutos
-    @idProd int,
-    @descProd varchar(30),
-    @preco numeric(5,2),
-    @maisvalia numeric (5,2)
-as
-insert into tblProduto values (@idProd, @descProd, @preco, @maisValia)
-go
+-- Editar Funcionários, o próprio nome diz
 
 CREATE PROC EditarFuncionario
 	@id INT,
@@ -205,5 +178,114 @@ CREATE PROC EditarFuncionario
 		UPDATE tblFuncionarios SET nomeFunc = @nome, senhaFunc = @senha, RG = @RG, salario = @salario, email = @email, telefone = @telefone, cep = @CEP WHERE idFuncionario = @id
 	GO
 
-exec EditarFuncionario 3, 'Edson Caminhoneiro', 'Ed029348504', '44.708.213-9',1120, 'jotacir.barros@etec.sp.gov.br', '(11)91021-7155', '69039-641'
-1
+
+-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> FORNECEDOR <<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+-- Listar Fornecedores, usado para mandar os fornecedores para o DtGrid 
+
+CREATE PROC ListarFornecedores
+as
+Select * from tblFornecedor
+go
+
+-- Listar Fornecedor, usado para pegar os valores do fornecedor na edição 
+
+CREATE PROC ListarFornecedor
+	@CNPJ VARCHAR(50)
+	AS
+		SELECT * FROM tblFornecedor WHERE CNPJ = @CNPJ
+	GO
+
+-- Cadastrar Fornecedores, o próprio nome diz
+
+Create proc CadastrarFornecedores
+    @cnpj varchar(18),
+    @descFor varchar(30),
+    @contato varchar(30),
+    @endereco varchar(50),
+    @cidade varchar(25)
+as 
+insert into tblFornecedor values (@cnpj, @descFor, @contato, @endereco, @cidade)
+go
+
+-- Editar Fornecedor, o próprio nome diz
+
+CREATE PROC EditarFornecedor
+	@CNPJ VARCHAR(18),
+	@descFor VARCHAR(30),
+	@contatoFor VARCHAR(30),
+	@enderecoFor VARCHAR(50),
+	@cidade VARCHAR(25)
+	AS
+		UPDATE tblFornecedor SET descFor = @descFor, contatoFor = @contatoFor, enderecoFor = @enderecoFor, cidade = @cidade WHERE CNPJ = @CNPJ
+	GO
+
+
+-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Produtos <<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+-- Listar Produtos, pega os produtos cadastrados para manda pro DtGrid
+
+CREATE PROC ListarProdutos
+	AS
+		SELECT * FROM tblProduto
+	GO
+
+-- Listar Produto, pega os valores na hora da edição
+
+CREATE PROC ListarProduto
+	@ID INT
+	AS
+		SELECT * FROM tblProduto WHERE idProduto = @ID
+	GO
+
+	exec ListarProduto 1
+
+
+-- Cadastrar Produtos, o próprio nome diz
+
+CREATE PROC CadastrarProdutos
+    @idProd int,
+    @descProd varchar(30),
+    @preco numeric(5,2),
+    @maisvalia numeric (5,2)
+as
+insert into tblProduto values (@idProd, @descProd, @preco, @maisValia)
+go
+
+-- Editar Produtos, o próprio nome diz
+
+CREATE PROC EditarProduto
+	@id INT,
+	@descProduto VARCHAR(50),
+	@precoProduto FLOAT,
+	@maisValia FLOAT
+	AS
+		UPDATE tblProduto SET descProduto = @descProduto, precoProduto = @precoProduto, maisValia = @maisValia WHERE idProduto = @id
+	GO
+
+
+-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Vendas <<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+-- Pegar vendas mensais
+CREATE PROC VendasMensais
+AS
+	Select sum(P.maisValia * D.Quantidade) AS 'lucroMensal' from tblProduto P
+    inner join tblDetalheVenda D on P.idProduto = D.idProduto
+    inner join tblVenda V on V.idVenda = D.idVenda and MONTH(dataVenda) = MONTH(GETDATE()) and year(dataVenda) = YEAR(getdate());
+GO
+
+CREATE PROC MaisVendidos
+AS
+select top 5 P.descProduto, sum(D.quantidade) as total from tblDetalheVenda D 
+    inner join  tblProduto P on P.idProduto = D.idProduto
+    group by P.descProduto order by total desc 
+GO
+
+
+-- Pegar valor do produto
+
+CREATE PROC valorUnit
+	@codBarras INT
+	AS
+		SELECT * FROM tblProduto WHERE idProduto = @codBarras
+	GO

@@ -41,25 +41,25 @@ namespace SenhorBolo.view
         {
             LimparTexto();
             funcionarios.setFuncionario(int.Parse(comboBoxID.GetItemText(comboBoxID.SelectedItem)));
-            txtSenha.Text = funcionario.senhaFunc;
-            txtNome.Text = funcionario.nomeFunc;
-            txtRG.Text = funcionario.RG;
-            txtCEP.Text = funcionario.cep;
-            txtTelefone.Text = funcionario.telefone;
-            txtEmail.Text = funcionario.email;
-            txtSalario.Text = Convert.ToString(funcionario.salario);
+            txtSenha.Text = Funcionario.senhaFunc;
+            txtNome.Text = Funcionario.nomeFunc;
+            txtRG.Text = Funcionario.RG;
+            txtCEP.Text = Funcionario.cep;
+            txtTelefone.Text = Funcionario.telefone;
+            txtEmail.Text = Funcionario.email;
+            txtSalario.Text = Convert.ToString(Funcionario.salario);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             bool funcionou;
-            funcionario.senhaFunc = txtSenha.Text;
-            funcionario.nomeFunc = txtNome.Text;
-            funcionario.RG = txtRG.Text;
-            funcionario.cep = txtCEP.Text; 
-            funcionario.telefone = txtTelefone.Text;
-            funcionario.email = txtEmail.Text;
-            funcionario.salario = double.Parse(txtSalario.Text);
+            Funcionario.senhaFunc = txtSenha.Text;
+            Funcionario.nomeFunc = txtNome.Text;
+            Funcionario.RG = txtRG.Text;
+            Funcionario.cep = txtCEP.Text; 
+            Funcionario.telefone = txtTelefone.Text;
+            Funcionario.email = txtEmail.Text;
+            Funcionario.salario = double.Parse(txtSalario.Text);
             funcionou = funcionarios.updateFuncionario();
             if (funcionou == false)
             {

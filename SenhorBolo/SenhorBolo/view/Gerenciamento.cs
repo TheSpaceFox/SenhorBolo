@@ -105,6 +105,7 @@ namespace SenhorBolo
         }
         private void btnGerenciarProdutos_Click(object sender, EventArgs e)
         {
+            openChildForm(new GerenciarProduto());
             showSubMenu(painelDropProduto);
         }
         #endregion
@@ -123,6 +124,7 @@ namespace SenhorBolo
 
         private void btnGerenciarFornecedores_Click(object sender, EventArgs e)
         {
+            openChildForm(new GerenciarFornecedores());
             showSubMenu(painelDropFornecedor);
         }
 
@@ -130,7 +132,7 @@ namespace SenhorBolo
 
         private void btnVendas_Click(object sender, EventArgs e)
         {
-            
+            openChildForm(new Vendas());
         }
 
         private void btnSair_Click(object sender, EventArgs e)

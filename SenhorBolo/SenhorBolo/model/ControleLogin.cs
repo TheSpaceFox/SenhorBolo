@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using SenhorBolo.dao;
 
+
 namespace SenhorBolo.model
 {
     public class ControleLogin

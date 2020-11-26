@@ -10,19 +10,43 @@ namespace SenhorBolo.model
 {
     class ControleProdutos
     {
-        public int ID;
         DataTable produtos = new DataTable();
-        ProdutosDAO gerenciar = new ProdutosDAO();
+        ProdutosDAO produtosDAO = new ProdutosDAO();
 
+        public DataTable getProdutos()
+        {
+            produtos = produtosDAO.getProdutos();
+            return produtos;
+
+        }
         public void Cadastrar(int id, string descprod, double preco, double maisvalia)
         {
-            gerenciar.Cadastrar(id, descprod, preco, maisvalia);
+            produtosDAO.Cadastrar(id, descprod, preco, maisvalia);
         }
 
         public DataTable ProdutosCadastrados()
         {
-            produtos = gerenciar.produtosCadastros();
+            produtos = produtosDAO.produtosCadastros();
             return produtos;
         }
+
+        public void setProduto(int idProduto)
+        {
+            produtosDAO.setProdutos(idProduto);
+        }
+
+        public bool updateProduto()
+        {
+            bool funcionou;
+            funcionou = produtosDAO.updateProduto();
+            return funcionou;
+        }
+
+        public void excluirProduto(int idProd)
+        {
+            produtosDAO.excluirProduto(idProd);
+        }
+
+
     }
 }

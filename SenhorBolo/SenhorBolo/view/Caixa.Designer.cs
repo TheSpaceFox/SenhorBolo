@@ -95,6 +95,7 @@
             this.txtCodigo.ShadowDecoration.Parent = this.txtCodigo;
             this.txtCodigo.Size = new System.Drawing.Size(363, 48);
             this.txtCodigo.TabIndex = 6;
+            this.txtCodigo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigo_KeyDown);
             // 
             // txtQuantidade
             // 
@@ -121,6 +122,7 @@
             this.txtQuantidade.ShadowDecoration.Parent = this.txtQuantidade;
             this.txtQuantidade.Size = new System.Drawing.Size(363, 48);
             this.txtQuantidade.TabIndex = 8;
+            this.txtQuantidade.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQuantidade_KeyDown);
             // 
             // lblQuantidade
             // 
@@ -141,6 +143,7 @@
             this.txtPrecoUnitario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPrecoUnitario.DisabledState.Parent = this.txtPrecoUnitario;
             this.txtPrecoUnitario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrecoUnitario.Enabled = false;
             this.txtPrecoUnitario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrecoUnitario.FocusedState.Parent = this.txtPrecoUnitario;
             this.txtPrecoUnitario.Font = new System.Drawing.Font("Helvetica", 18F);
@@ -177,6 +180,7 @@
             this.txtTotalItem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTotalItem.DisabledState.Parent = this.txtTotalItem;
             this.txtTotalItem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTotalItem.Enabled = false;
             this.txtTotalItem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTotalItem.FocusedState.Parent = this.txtTotalItem;
             this.txtTotalItem.Font = new System.Drawing.Font("Helvetica", 18F);
@@ -213,6 +217,7 @@
             this.txtSubtotal.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSubtotal.DisabledState.Parent = this.txtSubtotal;
             this.txtSubtotal.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSubtotal.Enabled = false;
             this.txtSubtotal.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSubtotal.FocusedState.Parent = this.txtSubtotal;
             this.txtSubtotal.Font = new System.Drawing.Font("Helvetica", 18F);
@@ -249,6 +254,7 @@
             this.txtValorPago.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtValorPago.DisabledState.Parent = this.txtValorPago;
             this.txtValorPago.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtValorPago.Enabled = false;
             this.txtValorPago.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtValorPago.FocusedState.Parent = this.txtValorPago;
             this.txtValorPago.Font = new System.Drawing.Font("Helvetica", 18F);
@@ -285,6 +291,7 @@
             this.txtTroco.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTroco.DisabledState.Parent = this.txtTroco;
             this.txtTroco.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTroco.Enabled = false;
             this.txtTroco.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTroco.FocusedState.Parent = this.txtTroco;
             this.txtTroco.Font = new System.Drawing.Font("Helvetica", 18F);
@@ -463,6 +470,7 @@
             this.Name = "Caixa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Caixa";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Caixa_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.datagridListaProdutos)).EndInit();
             this.panelListaProdutos.ResumeLayout(false);
             this.panelListaProdutos.PerformLayout();

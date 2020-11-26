@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SenhorBolo.common
 {
-    public static class funcionario
+    public static class Funcionario
     {
         public static int idFuncionario { get; set; }
         public static string nomeFunc { get; set; }

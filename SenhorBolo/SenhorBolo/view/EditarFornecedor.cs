@@ -7,14 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SenhorBolo.model;
+using SenhorBolo.common;
 
 namespace SenhorBolo.view
 {
     public partial class EditarFornecedor : Form
     {
+        ControleFornecedor fornecedores = new ControleFornecedor();
         public EditarFornecedor()
         {
             InitializeComponent();
+            comboID();
+        }
+
+        public void comboID()
+        {
+            DataTable Dt = new DataTable();
+            Dt = fornecedores.getFornecedores();
+            for (int i = 0; i < Dt.Rows.Count; i++)
+            {
+                comboBoxCNPJ.Items.Add(Dt.Rows[i]["CNPJ"].ToString());
+            }
         }
 
         private void EditarFornecedor_Load(object sender, EventArgs e)
@@ -24,11 +38,40 @@ namespace SenhorBolo.view
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            txtCidade.Text = null;
-            txtCNPJ.Text = null;
+            LimparTexto();
+        }
+
+        private void comboBoxID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LimparTexto();
+            fornecedores.setFornecedores(comboBoxCNPJ.GetItemText(comboBoxCNPJ.SelectedItem));
+            txtNome.Text = fornecedor.descFor;
+            txtContato.Text = fornecedor.contatoFor;
+            txtEndereco.Text = fornecedor.enderecoFor;
+            txtCidade.Text = fornecedor.cidade;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            bool funcionou;
+            fornecedor.descFor = txtNome.Text;
+            fornecedor.contatoFor = txtContato.Text;
+            fornecedor.enderecoFor = txtEndereco.Text;
+            fornecedor.cidade = txtCidade.Text;
+            funcionou = fornecedores.updateFornecedor();
+            if (funcionou == false)
+            {
+                MessageBox.Show("Login inválido, tente novamente", "Erro de Acesso");
+            }
+            LimparTexto();
+        }
+
+        public void LimparTexto()
+        {
+            txtNome.Text = null;
             txtContato.Text = null;
             txtEndereco.Text = null;
-            txtNome.Text = null;
+            txtCidade.Text = null;
         }
     }
 }

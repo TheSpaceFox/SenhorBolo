@@ -49,12 +49,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="common\Administrador.cs" />
     <Compile Include="common\fornecedor.cs" />
-    <Compile Include="common\funcionario.cs" />
+    <Compile Include="common\Funcionario.cs" />
+    <Compile Include="common\Produto.cs" />
+    <Compile Include="dao\CaixaDAO.cs" />
     <Compile Include="dao\FornecedoresDAO.cs" />
     <Compile Include="dao\ProdutoDAO.cs" />
+    <Compile Include="dao\VendasDAO.cs" />
+    <Compile Include="model\ControleCaixa.cs" />
     <Compile Include="model\ControleFornecedor.cs" />
     <Compile Include="model\ControleProdutos.cs" />
+    <Compile Include="model\ControleVendas.cs" />
     <Compile Include="view\CadastroFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="view\Vendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Vendas.Designer.cs">
+      <DependentUpon>Vendas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="view\CadastroFornecedor.resx">
       <DependentUpon>CadastroFornecedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +200,9 @@
     </Compile>
     <EmbeddedResource Include="view\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\Vendas.resx">
+      <DependentUpon>Vendas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

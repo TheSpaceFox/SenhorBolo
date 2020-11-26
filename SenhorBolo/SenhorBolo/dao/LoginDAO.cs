@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SenhorBolo.common;
 
 namespace SenhorBolo.dao
 {
@@ -24,6 +25,21 @@ namespace SenhorBolo.dao
                 Dr = Cmd.ExecuteReader();
                 if (Dr.HasRows) //Caso seja o sql tenha retorno, o valor é tido como valido
                 {
+                    if (userType == 0)
+                    {
+                        while (Dr.Read())
+                        {
+                            Funcionario.idFuncionario = Dr.GetInt32(0);
+                            Funcionario.nomeFunc = Dr.GetString(1);
+                        }
+                    }
+                    else {
+                        while (Dr.Read())
+                        {
+                            Administrador.idAdmin = Dr.GetInt32(0);
+                            Administrador.nomeAdmin = Dr.GetString(1);
+                        }
+                    }
                     Acesso = true;
                 }
             }

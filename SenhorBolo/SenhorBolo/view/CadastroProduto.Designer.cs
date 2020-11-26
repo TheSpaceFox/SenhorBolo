@@ -33,16 +33,16 @@
             this.lblCampoObrigatorio = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnLimpar = new Guna.UI2.WinForms.Guna2Button();
             this.btnRegistrar = new Guna.UI2.WinForms.Guna2Button();
-            this.txtPreco = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPreco = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtDescricao = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblDescricao = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtMaisValia = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblMaisValia = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblId = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.separator = new Guna.UI2.WinForms.Guna2Separator();
             this.lblCadastroFuncionarios = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtMaisValia = new System.Windows.Forms.MaskedTextBox();
+            this.txtPreco = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // controlFechar
@@ -110,33 +110,6 @@
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // txtPreco
-            // 
-            this.txtPreco.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPreco.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPreco.DefaultText = "";
-            this.txtPreco.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPreco.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPreco.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPreco.DisabledState.Parent = this.txtPreco;
-            this.txtPreco.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPreco.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPreco.FocusedState.Parent = this.txtPreco;
-            this.txtPreco.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPreco.ForeColor = System.Drawing.Color.Black;
-            this.txtPreco.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPreco.HoverState.Parent = this.txtPreco;
-            this.txtPreco.Location = new System.Drawing.Point(553, 303);
-            this.txtPreco.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtPreco.Name = "txtPreco";
-            this.txtPreco.PasswordChar = '\0';
-            this.txtPreco.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtPreco.PlaceholderText = "";
-            this.txtPreco.SelectedText = "";
-            this.txtPreco.ShadowDecoration.Parent = this.txtPreco;
-            this.txtPreco.Size = new System.Drawing.Size(252, 35);
-            this.txtPreco.TabIndex = 40;
-            // 
             // lblPreco
             // 
             this.lblPreco.BackColor = System.Drawing.Color.Transparent;
@@ -185,33 +158,6 @@
             this.lblDescricao.Size = new System.Drawing.Size(83, 23);
             this.lblDescricao.TabIndex = 31;
             this.lblDescricao.Text = "Descrição";
-            // 
-            // txtMaisValia
-            // 
-            this.txtMaisValia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMaisValia.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaisValia.DefaultText = "";
-            this.txtMaisValia.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMaisValia.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMaisValia.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaisValia.DisabledState.Parent = this.txtMaisValia;
-            this.txtMaisValia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaisValia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaisValia.FocusedState.Parent = this.txtMaisValia;
-            this.txtMaisValia.Font = new System.Drawing.Font("Helvetica", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaisValia.ForeColor = System.Drawing.Color.Black;
-            this.txtMaisValia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaisValia.HoverState.Parent = this.txtMaisValia;
-            this.txtMaisValia.Location = new System.Drawing.Point(553, 385);
-            this.txtMaisValia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtMaisValia.Name = "txtMaisValia";
-            this.txtMaisValia.PasswordChar = '\0';
-            this.txtMaisValia.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtMaisValia.PlaceholderText = "";
-            this.txtMaisValia.SelectedText = "";
-            this.txtMaisValia.ShadowDecoration.Parent = this.txtMaisValia;
-            this.txtMaisValia.Size = new System.Drawing.Size(252, 35);
-            this.txtMaisValia.TabIndex = 30;
             // 
             // lblMaisValia
             // 
@@ -281,21 +227,41 @@
             this.lblCadastroFuncionarios.TabIndex = 25;
             this.lblCadastroFuncionarios.Text = "Cadastro de Produtos";
             // 
+            // txtMaisValia
+            // 
+            this.txtMaisValia.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaisValia.Location = new System.Drawing.Point(553, 385);
+            this.txtMaisValia.Mask = "$0000.00";
+            this.txtMaisValia.Name = "txtMaisValia";
+            this.txtMaisValia.Size = new System.Drawing.Size(252, 30);
+            this.txtMaisValia.TabIndex = 48;
+            this.txtMaisValia.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // txtPreco
+            // 
+            this.txtPreco.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPreco.Location = new System.Drawing.Point(553, 303);
+            this.txtPreco.Mask = "$0000.00";
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(252, 30);
+            this.txtPreco.TabIndex = 49;
+            this.txtPreco.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // CadastroProduto
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(929, 686);
+            this.Controls.Add(this.txtPreco);
+            this.Controls.Add(this.txtMaisValia);
             this.Controls.Add(this.controlFechar);
             this.Controls.Add(this.lblAsteristico);
             this.Controls.Add(this.lblCampoObrigatorio);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnRegistrar);
-            this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.lblPreco);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblDescricao);
-            this.Controls.Add(this.txtMaisValia);
             this.Controls.Add(this.lblMaisValia);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblId);
@@ -317,15 +283,15 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCampoObrigatorio;
         private Guna.UI2.WinForms.Guna2Button btnLimpar;
         private Guna.UI2.WinForms.Guna2Button btnRegistrar;
-        private Guna.UI2.WinForms.Guna2TextBox txtPreco;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPreco;
         private Guna.UI2.WinForms.Guna2TextBox txtDescricao;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDescricao;
-        private Guna.UI2.WinForms.Guna2TextBox txtMaisValia;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMaisValia;
         private Guna.UI2.WinForms.Guna2TextBox txtID;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblId;
         private Guna.UI2.WinForms.Guna2Separator separator;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblCadastroFuncionarios;
+        private System.Windows.Forms.MaskedTextBox txtMaisValia;
+        private System.Windows.Forms.MaskedTextBox txtPreco;
     }
 }

@@ -12,13 +12,11 @@ namespace SenhorBolo.dao
     class FuncionariosDAO : Conexao
     {
         DataTable Dt = new DataTable();
-
         public DataTable funcionariosCadastrados()
         {
             try
             {
                 Conectar();
-                
                 Cmd = new SqlCommand("ListarFuncionarios", Con);
                 Cmd.CommandType = CommandType.StoredProcedure;
                 Dr = Cmd.ExecuteReader();
@@ -95,14 +93,14 @@ namespace SenhorBolo.dao
                 {
                     while (Dr.Read())
                     {
-                        funcionario.idFuncionario = Dr.GetInt32(0);
-                        funcionario.nomeFunc = Dr.GetString(1);
-                        funcionario.senhaFunc = Dr.GetString(2);
-                        funcionario.RG = Dr.GetString(3);
-                        funcionario.salario = Dr.GetDouble(4);
-                        funcionario.email = Dr.GetString(5);
-                        funcionario.telefone = Dr.GetString(6);
-                        funcionario.cep = Dr.GetString(7);
+                        Funcionario.idFuncionario = Dr.GetInt32(0);
+                        Funcionario.nomeFunc = Dr.GetString(1);
+                        Funcionario.senhaFunc = Dr.GetString(2);
+                        Funcionario.RG = Dr.GetString(3);
+                        Funcionario.salario = Dr.GetDouble(4);
+                        Funcionario.email = Dr.GetString(5);
+                        Funcionario.telefone = Dr.GetString(6);
+                        Funcionario.cep = Dr.GetString(7);
                     }
                 }
 
@@ -122,14 +120,14 @@ namespace SenhorBolo.dao
                 Conectar();
                 Cmd = new SqlCommand("EditarFuncionario", Con);
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.Parameters.AddWithValue("@id", funcionario.idFuncionario);
-                Cmd.Parameters.AddWithValue("@nome", funcionario.nomeFunc);
-                Cmd.Parameters.AddWithValue("@senha", funcionario.senhaFunc);
-                Cmd.Parameters.AddWithValue("@RG", funcionario.RG);
-                Cmd.Parameters.AddWithValue("@salario", funcionario.salario);
-                Cmd.Parameters.AddWithValue("@email", funcionario.email);
-                Cmd.Parameters.AddWithValue("@telefone", funcionario.telefone);
-                Cmd.Parameters.AddWithValue("@CEP", funcionario.cep);
+                Cmd.Parameters.AddWithValue("@id", Funcionario.idFuncionario);
+                Cmd.Parameters.AddWithValue("@nome", Funcionario.nomeFunc);
+                Cmd.Parameters.AddWithValue("@senha", Funcionario.senhaFunc);
+                Cmd.Parameters.AddWithValue("@RG", Funcionario.RG);
+                Cmd.Parameters.AddWithValue("@salario", Funcionario.salario);
+                Cmd.Parameters.AddWithValue("@email", Funcionario.email);
+                Cmd.Parameters.AddWithValue("@telefone", Funcionario.telefone);
+                Cmd.Parameters.AddWithValue("@CEP", Funcionario.cep);
                 Cmd.ExecuteNonQuery();
                 funcionou = true;
             }
@@ -142,6 +140,25 @@ namespace SenhorBolo.dao
                 Desconectar();
             }
             return funcionou;
+        }
+
+        public void excluirFuncionario(int idFunc)
+        {
+            try
+            {
+                Conectar();
+                Cmd = new SqlCommand("DELETE FROM tblFuncionarios WHERE idFuncionario = @idFunc", Con);
+                Cmd.Parameters.AddWithValue("@idFunc", idFunc);
+                Cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro ao excluir o funcionário: " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
         }
 
     }

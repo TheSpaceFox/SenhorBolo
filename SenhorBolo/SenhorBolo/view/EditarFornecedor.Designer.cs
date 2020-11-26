@@ -69,6 +69,7 @@
             this.btnEditar.Size = new System.Drawing.Size(145, 36);
             this.btnEditar.TabIndex = 33;
             this.btnEditar.Text = "Salvar alterações";
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // txtCidade
             // 
@@ -157,9 +158,9 @@
             this.lblProduto.Font = new System.Drawing.Font("Helvetica", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProduto.Location = new System.Drawing.Point(22, 12);
             this.lblProduto.Name = "lblProduto";
-            this.lblProduto.Size = new System.Drawing.Size(212, 35);
+            this.lblProduto.Size = new System.Drawing.Size(270, 35);
             this.lblProduto.TabIndex = 27;
-            this.lblProduto.Text = "Editar produtos";
+            this.lblProduto.Text = "Editar fornecedores";
             // 
             // txtContato
             // 
@@ -203,6 +204,7 @@
             this.comboBoxCNPJ.ShadowDecoration.Parent = this.comboBoxCNPJ;
             this.comboBoxCNPJ.Size = new System.Drawing.Size(252, 36);
             this.comboBoxCNPJ.TabIndex = 36;
+            this.comboBoxCNPJ.SelectedIndexChanged += new System.EventHandler(this.comboBoxID_SelectedIndexChanged);
             // 
             // EditarFornecedor
             // 
@@ -221,6 +223,7 @@
             this.Controls.Add(this.lblProduto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EditarFornecedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarFornecedor";
             this.Load += new System.EventHandler(this.EditarFornecedor_Load);
             this.ResumeLayout(false);

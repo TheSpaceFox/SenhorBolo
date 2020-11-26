@@ -95,6 +95,7 @@
             this.btnExcluir.Size = new System.Drawing.Size(145, 36);
             this.btnExcluir.TabIndex = 37;
             this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -110,6 +111,7 @@
             this.btnEditar.Size = new System.Drawing.Size(145, 36);
             this.btnEditar.TabIndex = 36;
             this.btnEditar.Text = "Editar";
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // dataGrid_Fornecedor
             // 

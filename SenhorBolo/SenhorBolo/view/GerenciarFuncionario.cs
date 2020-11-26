@@ -16,14 +16,18 @@ namespace SenhorBolo
     public partial class GerenciarFuncionario : Form
     {
         ControleFuncionarios funcionarios = new ControleFuncionarios();
+        DataTable funcionariosCadastrados = new DataTable();
         public GerenciarFuncionario()
         {
             InitializeComponent();
-            dt = funcionarios.funcionariosCadastrados();
-            dataGrid_Funcionario.DataSource = dt;
+            listarFuncionarios();
         }
 
-        DataTable dt = new DataTable();
+        public void listarFuncionarios()
+        {
+            funcionariosCadastrados = funcionarios.funcionariosCadastrados();
+            dataGrid_Funcionario.DataSource = funcionariosCadastrados;
+        }
         
         private void controlFechar_Click(object sender, EventArgs e)
         {
@@ -38,7 +42,7 @@ namespace SenhorBolo
 
         private void btnPesquisa_Click(object sender, EventArgs e)
         {
-            DataView data = dt.DefaultView;
+            DataView data = funcionariosCadastrados.DefaultView;
             switch(comboBox_Pesquisa.SelectedIndex)
             {
                 case 0:
@@ -69,18 +73,11 @@ namespace SenhorBolo
             dataGrid_Funcionario.DataSource = data.ToTable(); ;
         }
 
-        private void limparDataGrid()
+        private void btnExcluir_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGrid_Funcionario.RowCount; i++)
-            {
-                dataGrid_Funcionario.Rows[i].DataGridView.Columns.Clear();
-            }
-        }
-
-        private void dataGrid_Funcionario_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            int linha = dataGrid_Funcionario.CurrentRow.Index;
-            MessageBox.Show("Cliquei no dtgrid na linha " + Convert.ToString(linha), "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            int idFuncionario = dataGrid_Funcionario.CurrentRow.Index + 1;
+            funcionarios.excluirFuncionario(idFuncionario);
+            dataGrid_Funcionario.Rows.RemoveAt(dataGrid_Funcionario.CurrentRow.Index);
         }
     }
 }

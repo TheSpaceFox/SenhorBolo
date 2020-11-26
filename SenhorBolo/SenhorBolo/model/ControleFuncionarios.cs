@@ -12,33 +12,37 @@ namespace SenhorBolo.model
     {
 
         DataTable funcionarios = new DataTable();
-        FuncionariosDAO gerenciar = new FuncionariosDAO();
+        FuncionariosDAO funcionariosDAO = new FuncionariosDAO();
 
         public DataTable getFuncionarios()
         {
-            funcionarios = gerenciar.getFuncionarios();
+            funcionarios = funcionariosDAO.getFuncionarios();
             return funcionarios;
         }
         public void Cadastrar(int id, string nome, string senha, string rg, double salario, string email, string telefone, string cep)
         {
-            gerenciar.Cadastrar(id, nome, senha, rg, salario, email, telefone, cep);
+            funcionariosDAO.Cadastrar(id, nome, senha, rg, salario, email, telefone, cep);
         }
 
         public DataTable funcionariosCadastrados()
         {
-            funcionarios = gerenciar.funcionariosCadastrados();
+            funcionarios = funcionariosDAO.funcionariosCadastrados();
             return funcionarios;
         }
 
+        public void excluirFuncionario(int idFunc)
+        {
+            funcionariosDAO.excluirFuncionario(idFunc);
+        }
         public void setFuncionario(int idFuncionario)
         {
-            gerenciar.setFuncionario(idFuncionario);
+            funcionariosDAO.setFuncionario(idFuncionario);
         }
 
         public bool updateFuncionario()
         {
             bool funcionou;
-            funcionou = gerenciar.updateFuncionario();
+            funcionou = funcionariosDAO.updateFuncionario();
             return funcionou;
         }
     }
