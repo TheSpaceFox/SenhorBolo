@@ -16,7 +16,7 @@ namespace SenhorBolo.dao
             try
             {
                 Conectar();
-                Cmd = new SqlCommand("VendasMensais", Con);
+                Cmd = new SqlCommand("LucroMensal", Con);
                 Cmd.CommandType = CommandType.StoredProcedure;
                 Object lucro = Cmd.ExecuteScalar();
                 lucroMensal = Convert.ToDouble(lucro);
@@ -34,14 +34,14 @@ namespace SenhorBolo.dao
 
         public DataTable getMaisVendidos()
         {
-            DataTable dt = new DataTable();
+            DataTable Dt = new DataTable();
             try
             {
                 Conectar();
                 Cmd = new SqlCommand("MaisVendidos", Con);
                 Cmd.CommandType = CommandType.StoredProcedure;
                 Dr = Cmd.ExecuteReader();
-                dt.Load(Dr);
+                Dt.Load(Dr);
             }
             catch (Exception e)
             {
@@ -51,7 +51,29 @@ namespace SenhorBolo.dao
             {
                 Desconectar();
             }
-            return dt;
+            return Dt;
+        }
+
+        public DataTable getVendasMensais()
+        {
+            DataTable Dt = new DataTable();
+            try
+            {
+                Conectar();
+                Cmd = new SqlCommand("VendasMensais", Con);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Dr = Cmd.ExecuteReader();
+                Dt.Load(Dr);
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro ao pegar as vendas mensais: " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return Dt;
         }
     }
 }

@@ -33,8 +33,9 @@ namespace SenhorBolo.dao
             return Dt;
         }
 
-        public void Cadastrar(int id, string descprod, double preco, double maisvalia)
+        public bool Cadastrar(int id, string descprod, double preco, double maisvalia)
         {
+            bool cadastro = false;
             try
             {
                 Conectar();
@@ -45,6 +46,7 @@ namespace SenhorBolo.dao
                 Cmd.Parameters.AddWithValue("@preco", preco);
                 Cmd.Parameters.AddWithValue("@maisvalia", maisvalia);
                 Cmd.ExecuteNonQuery();
+                cadastro = true;
             }
             catch (Exception e)
             {
@@ -54,6 +56,7 @@ namespace SenhorBolo.dao
             {
                 Desconectar();
             }
+            return cadastro;
         }
 
         public DataTable getProdutos()
@@ -139,7 +142,7 @@ namespace SenhorBolo.dao
             }
             catch (Exception e)
             {
-                throw new Exception("Erro ao excluir o funcionário: " + e.Message);
+                throw new Exception("Erro ao excluir: " + e.Message);
             }
             finally
             {

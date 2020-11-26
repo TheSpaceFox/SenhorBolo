@@ -18,9 +18,9 @@ namespace SenhorBolo.model
             fornecedores = gerenciar.getFornecedores();
             return fornecedores;
         }
-        public void Cadastrar(string cnpj, string descfor, string contato, string endereco, string cidade)
+        public bool Cadastrar(string cnpj, string descfor, string contato, string endereco, string cidade)
         {
-            gerenciar.Cadastrar(cnpj, descfor, contato, endereco, cidade);
+            return gerenciar.Cadastrar(cnpj, descfor, contato, endereco, cidade);
         }
 
         public DataTable fornecedoresCadastros()

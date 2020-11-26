@@ -29,7 +29,16 @@ namespace SenhorBolo
             }
             else
             {
-                produto.Cadastrar(Convert.ToInt32(txtID.Text), txtDescricao.Text, Convert.ToDouble(txtPreco.Text), Convert.ToDouble(txtMaisValia.Text));
+                double preco = (Convert.ToDouble(txtPreco.Text) / 100);
+                double maisValia = (Convert.ToDouble(txtMaisValia.Text) / 100);
+                if (produto.Cadastrar(Convert.ToInt32(txtID.Text), txtDescricao.Text, preco, maisValia))
+                {
+                    MessageBox.Show("Produto cadastrado com sucesso!", "Sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao cadastrar ;-;");
+                }
                 limparTexto();
             }
         }

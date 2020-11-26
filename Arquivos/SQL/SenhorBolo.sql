@@ -14,7 +14,7 @@ CREATE TABLE tblFuncionarios(
 )
 
 CREATE TABLE tblVenda(
-	idVenda INT PRIMARY KEY,
+	idVenda INT PRIMARY KEY IDENTITY(1,1),
 	dataVenda DATE,
 	idFuncionario INT FOREIGN KEY
 	REFERENCES tblFuncionarios (idFuncionario)
@@ -85,7 +85,8 @@ insert into tblFuncionarios values
 (2, 'Edson Teruel', 'BaroesDaPisadinhaHD', '16.691.104-5', 1450.00, 'victor.shu@etec.sp.gov.br', '(11)93811-6566', '88359-325'),
 (3, 'Edson Advogado', 'Ed029348504', '44.708.213-9', 1120.00, 'jotacir.barros@etec.sp.gov.br', '(11)91021-7155', '69039-641'),
 (4, 'Edson Sandubinha', 'KiderOvo45', '44.342.046-4', 1200.00, 'cristina.moris@etec.sp.gov.br', '(11)96245-8316', '59620-752'),
-(5, 'Edson Habbibs', 'Estanaoeminhasenhakkk', '50.003.556-8', 1450.00, 'arthus.val@etec.sp.gov.br', '(11)92940-6934', '69314-635')
+(5, 'Edson Habbibs', 'Estanaoeminhasenhakkk', '50.003.556-8', 1450.00, 'arthus.val@etec.sp.gov.br', '(11)92940-6934', '69314-635'),
+(6, 'Juanito Lhamas', '1234', '48.374.141-3', 1054.00, 'juanito.lhamas@onlyfans.bo', '(11)97016-0855', '02317-060')
 
 insert into tblAdministrador values
 (1, 'Sueli White', '221175'),
@@ -103,7 +104,7 @@ insert into tblFornecedor values
 ('48.661.629/0001-09', 'Renner', '31914-8238', 'Travessa Menino Marcelo', 'Maceió')
 
 insert into tblVenda values
-(1, '25/11/2020', 1)
+('25/11/2020', 1)
 
 select * from tblVenda
 
@@ -130,6 +131,8 @@ BEGIN
 	ELSE 
 		SELECT * FROM tblFuncionarios WHERE idFuncionario = @login and senhaFunc = @senha
 END
+
+		SELECT * FROM tblAdministrador WHERE idAdministrador = 6 and senhaADM = 1234
 
 
 -- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> FUNCIONARIO <<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -267,20 +270,38 @@ CREATE PROC EditarProduto
 -- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Vendas <<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 -- Pegar vendas mensais
-CREATE PROC VendasMensais
+CREATE PROC LucroMensal
 AS
 	Select sum(P.maisValia * D.Quantidade) AS 'lucroMensal' from tblProduto P
     inner join tblDetalheVenda D on P.idProduto = D.idProduto
     inner join tblVenda V on V.idVenda = D.idVenda and MONTH(dataVenda) = MONTH(GETDATE()) and year(dataVenda) = YEAR(getdate());
 GO
 
-CREATE PROC MaisVendidos
+-- Lucro bruto mensal
+CREATE PROC TotalMensal
 AS
-select top 5 P.descProduto, sum(D.quantidade) as total from tblDetalheVenda D 
-    inner join  tblProduto P on P.idProduto = D.idProduto
-    group by P.descProduto order by total desc 
+	Select sum(D.valorTotal) AS 'valorMensal' from tblDetalheVenda D
+	inner join tblVenda V ON V.idVenda = D.idVenda AND MONTH(dataVenda) = MONTH(GETDATE()) and YEAR(dataVenda) = YEAR(getdate());
 GO
 
+-- Produtos mais vendidos
+CREATE PROC MaisVendidos
+AS
+select top 5 P.descProduto AS 'Produto' , sum(D.quantidade) as Qtde from tblDetalheVenda D 
+    inner join  tblProduto P on P.idProduto = D.idProduto
+    group by P.descProduto order by Qtde desc 
+GO
+
+-- Vendas Mensais
+CREATE PROC VendasMensais
+AS
+	SELECT D.* , V.dataVenda, V.idFuncionario AS 'idFunc' FROM tblDetalheVenda D
+	inner join tblVenda V ON V.idVenda = D.idVenda AND MONTH(dataVenda) = MONTH(GETDATE()) and YEAR(dataVenda) = YEAR(getdate()) ORDER BY V.dataVenda ASC;
+GO
+
+exec VendasMensais
+
+-- >>>>>>>>>>>>>>>>>>>>>>> Caixa <<<<<<<<<<<<<<<<<<<<<<<<<
 
 -- Pegar valor do produto
 
@@ -289,3 +310,30 @@ CREATE PROC valorUnit
 	AS
 		SELECT * FROM tblProduto WHERE idProduto = @codBarras
 	GO
+
+CREATE PROC gerarVenda
+	@data DATE,
+	@idFuncionario INT
+AS 
+    INSERT INTO tblVenda VALUES (@data, @idFuncionario)
+GO
+
+exec gerarVenda '26/11/2020', 1
+
+CREATE PROC pegarID
+	@nomeProd VARCHAR(50)
+	AS
+		SELECT idProduto FROM tblProduto WHERE descProduto = @nomeProd
+	GO
+
+CREATE PROC gerarDetalheVenda
+	@idVenda INT,
+	@idProduto INT,
+	@qtde INT,
+	@valorTotal FLOAT
+	AS
+		SET @idVenda = (SELECT MAX(idVenda) from tblVenda)
+		INSERT INTO tblDetalheVenda values (@idVenda, @idProduto, @qtde, @valorTotal)
+	GO
+
+	exec gerarDetalheVenda 0, 1, 2, 10

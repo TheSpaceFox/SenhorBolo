@@ -32,7 +32,6 @@
             this.txtCodigo = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtQuantidade = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblQuantidade = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtPrecoUnitario = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPrecoUnitario = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTotalItem = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblTotalItem = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -55,6 +54,7 @@
             this.lblHorario = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblNomeFuncionario = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.relógio = new System.Windows.Forms.Timer(this.components);
+            this.txtPrecoUnitario = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.datagridListaProdutos)).BeginInit();
             this.panelListaProdutos.SuspendLayout();
             this.panelHeader.SuspendLayout();
@@ -133,33 +133,6 @@
             this.lblQuantidade.Size = new System.Drawing.Size(114, 26);
             this.lblQuantidade.TabIndex = 7;
             this.lblQuantidade.Text = "Quantidade";
-            // 
-            // txtPrecoUnitario
-            // 
-            this.txtPrecoUnitario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPrecoUnitario.DefaultText = "";
-            this.txtPrecoUnitario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPrecoUnitario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPrecoUnitario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPrecoUnitario.DisabledState.Parent = this.txtPrecoUnitario;
-            this.txtPrecoUnitario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPrecoUnitario.Enabled = false;
-            this.txtPrecoUnitario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrecoUnitario.FocusedState.Parent = this.txtPrecoUnitario;
-            this.txtPrecoUnitario.Font = new System.Drawing.Font("Helvetica", 18F);
-            this.txtPrecoUnitario.ForeColor = System.Drawing.Color.Black;
-            this.txtPrecoUnitario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrecoUnitario.HoverState.Parent = this.txtPrecoUnitario;
-            this.txtPrecoUnitario.Location = new System.Drawing.Point(34, 376);
-            this.txtPrecoUnitario.Margin = new System.Windows.Forms.Padding(5);
-            this.txtPrecoUnitario.Name = "txtPrecoUnitario";
-            this.txtPrecoUnitario.PasswordChar = '\0';
-            this.txtPrecoUnitario.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtPrecoUnitario.PlaceholderText = "";
-            this.txtPrecoUnitario.SelectedText = "";
-            this.txtPrecoUnitario.ShadowDecoration.Parent = this.txtPrecoUnitario;
-            this.txtPrecoUnitario.Size = new System.Drawing.Size(363, 48);
-            this.txtPrecoUnitario.TabIndex = 10;
             // 
             // lblPrecoUnitario
             // 
@@ -271,6 +244,7 @@
             this.txtValorPago.ShadowDecoration.Parent = this.txtValorPago;
             this.txtValorPago.Size = new System.Drawing.Size(316, 48);
             this.txtValorPago.TabIndex = 16;
+            this.txtValorPago.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtValorPago_KeyDown);
             // 
             // lblValorPago
             // 
@@ -434,11 +408,39 @@
             this.lblNomeFuncionario.Size = new System.Drawing.Size(149, 21);
             this.lblNomeFuncionario.TabIndex = 0;
             this.lblNomeFuncionario.Text = "Edson Koshikumo";
+            this.lblNomeFuncionario.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // relógio
             // 
             this.relógio.Enabled = true;
             this.relógio.Tick += new System.EventHandler(this.relógio_Tick);
+            // 
+            // txtPrecoUnitario
+            // 
+            this.txtPrecoUnitario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrecoUnitario.DefaultText = "";
+            this.txtPrecoUnitario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPrecoUnitario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPrecoUnitario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrecoUnitario.DisabledState.Parent = this.txtPrecoUnitario;
+            this.txtPrecoUnitario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPrecoUnitario.Enabled = false;
+            this.txtPrecoUnitario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPrecoUnitario.FocusedState.Parent = this.txtPrecoUnitario;
+            this.txtPrecoUnitario.Font = new System.Drawing.Font("Helvetica", 18F);
+            this.txtPrecoUnitario.ForeColor = System.Drawing.Color.Black;
+            this.txtPrecoUnitario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPrecoUnitario.HoverState.Parent = this.txtPrecoUnitario;
+            this.txtPrecoUnitario.Location = new System.Drawing.Point(34, 376);
+            this.txtPrecoUnitario.Margin = new System.Windows.Forms.Padding(5);
+            this.txtPrecoUnitario.Name = "txtPrecoUnitario";
+            this.txtPrecoUnitario.PasswordChar = '\0';
+            this.txtPrecoUnitario.PlaceholderForeColor = System.Drawing.Color.Black;
+            this.txtPrecoUnitario.PlaceholderText = "";
+            this.txtPrecoUnitario.SelectedText = "";
+            this.txtPrecoUnitario.ShadowDecoration.Parent = this.txtPrecoUnitario;
+            this.txtPrecoUnitario.Size = new System.Drawing.Size(363, 48);
+            this.txtPrecoUnitario.TabIndex = 10;
             // 
             // Caixa
             // 
@@ -470,7 +472,7 @@
             this.Name = "Caixa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Caixa";
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Caixa_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Caixa_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.datagridListaProdutos)).EndInit();
             this.panelListaProdutos.ResumeLayout(false);
             this.panelListaProdutos.PerformLayout();
@@ -486,7 +488,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtCodigo;
         private Guna.UI2.WinForms.Guna2TextBox txtQuantidade;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblQuantidade;
-        private Guna.UI2.WinForms.Guna2TextBox txtPrecoUnitario;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPrecoUnitario;
         private Guna.UI2.WinForms.Guna2TextBox txtTotalItem;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalItem;
@@ -509,5 +510,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblHorario;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblNomeFuncionario;
         private System.Windows.Forms.Timer relógio;
+        private Guna.UI2.WinForms.Guna2TextBox txtPrecoUnitario;
     }
 }

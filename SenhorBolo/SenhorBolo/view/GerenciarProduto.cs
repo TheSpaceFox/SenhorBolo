@@ -70,9 +70,13 @@ namespace SenhorBolo.view
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            int idProduto = dataGrid_Produtos.CurrentRow.Index + 1;
-            controleProdutos.excluirProduto(idProduto);
-            dataGrid_Produtos.Rows.RemoveAt(dataGrid_Produtos.CurrentRow.Index);
+            if (MessageBox.Show("Deseja apagar esse produto?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                int idProduto = int.Parse(dataGrid_Produtos.CurrentRow.Cells[0].Value.ToString());
+                controleProdutos.excluirProduto(idProduto);
+                dataGrid_Produtos.Rows.RemoveAt(dataGrid_Produtos.CurrentRow.Index);
+                MessageBox.Show("Produto apagado com sucesso", "Sucesso", MessageBoxButtons.OK);
+            }
         }
     }
 }

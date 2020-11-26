@@ -75,9 +75,13 @@ namespace SenhorBolo
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            int idFuncionario = dataGrid_Funcionario.CurrentRow.Index + 1;
-            funcionarios.excluirFuncionario(idFuncionario);
-            dataGrid_Funcionario.Rows.RemoveAt(dataGrid_Funcionario.CurrentRow.Index);
+            if (MessageBox.Show("Deseja apagar esse funcionário?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==  DialogResult.Yes)
+            {
+                int idFuncionario = int.Parse(dataGrid_Funcionario.CurrentRow.Cells[0].Value.ToString());
+                funcionarios.excluirFuncionario(idFuncionario);
+                dataGrid_Funcionario.Rows.RemoveAt(dataGrid_Funcionario.CurrentRow.Index);
+                MessageBox.Show("Funcionário apagado com sucesso", "Sucesso", MessageBoxButtons.OK);
+            }
         }
     }
 }

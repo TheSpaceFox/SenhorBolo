@@ -13,7 +13,7 @@ namespace SenhorBolo.model
         VendasDAO vendasDAO = new VendasDAO();
         double lucroMensal;
         string vendas = "R$ 0,00" ;
-        public string vendasMensais()
+        public string getLucroMensal()
         {
             lucroMensal = vendasDAO.getLucroMensal();
             if (vendas != null)
@@ -28,6 +28,11 @@ namespace SenhorBolo.model
             DataTable maisVendidos = new DataTable();
             maisVendidos = vendasDAO.getMaisVendidos();
             return maisVendidos;
+        }
+
+        public DataTable getVendasMensais()
+        {
+            return vendasDAO.getVendasMensais();
         }
     }
 }

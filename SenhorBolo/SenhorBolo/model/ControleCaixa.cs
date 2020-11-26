@@ -20,11 +20,9 @@ namespace SenhorBolo.model
             caixa.gerarVenda();
         }
 
-        /*
-        public void gerarDetalheVenda(int idProduto, int qtde, double valorTotal)
+        public void gerarDetalheVenda(string descProduto, int qtde, double valorTotal)
         {
-            caixa.gerarDetalheVenda();
+            caixa.gerarDetalheVenda(descProduto, qtde, valorTotal);
         }
-        */
     }
 }

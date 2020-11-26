@@ -231,7 +231,7 @@
             // 
             this.txtMaisValia.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaisValia.Location = new System.Drawing.Point(553, 385);
-            this.txtMaisValia.Mask = "$0000.00";
+            this.txtMaisValia.Mask = "$00.00";
             this.txtMaisValia.Name = "txtMaisValia";
             this.txtMaisValia.Size = new System.Drawing.Size(252, 30);
             this.txtMaisValia.TabIndex = 48;
@@ -241,7 +241,7 @@
             // 
             this.txtPreco.Font = new System.Drawing.Font("Helvetica", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPreco.Location = new System.Drawing.Point(553, 303);
-            this.txtPreco.Mask = "$0000.00";
+            this.txtPreco.Mask = "$00.00";
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(252, 30);
             this.txtPreco.TabIndex = 49;

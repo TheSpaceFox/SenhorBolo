@@ -50,10 +50,10 @@ namespace SenhorBolo.view
                     data.RowFilter = string.Format("descFor like '%{0}%'", txtPesquisa.Text);
                     break;
                 case 2:
-                    data.RowFilter = string.Format("contato like '%{0}%'", txtPesquisa.Text);
+                    data.RowFilter = string.Format("contatoFor like '%{0}%'", txtPesquisa.Text);
                     break;
                 case 3:
-                    data.RowFilter = string.Format("endereco '%{0}%'", txtPesquisa.Text);
+                    data.RowFilter = string.Format("enderecoFor like '%{0}%'", txtPesquisa.Text);
                     break;
                 case 4:
                     data.RowFilter = string.Format("cidade like '%{0}%'", txtPesquisa.Text);
@@ -64,9 +64,14 @@ namespace SenhorBolo.view
 
         private void btnExcluir_Click(object sender, EventArgs e) 
         {
-            string CNPJ = dataGrid_Fornecedor.CurrentRow.Cells[0].Value.ToString(); 
-            controleFornecedores.deleteFornecedor(CNPJ);
-            dataGrid_Fornecedor.Rows.RemoveAt(dataGrid_Fornecedor.CurrentRow.Index);
+            if (MessageBox.Show("Deseja apagar esse fornecedor?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string CNPJ = dataGrid_Fornecedor.CurrentRow.Cells[0].Value.ToString();
+                controleFornecedores.deleteFornecedor(CNPJ);
+                dataGrid_Fornecedor.Rows.RemoveAt(dataGrid_Fornecedor.CurrentRow.Index);
+                MessageBox.Show("Fornecedor apagado com sucesso", "Sucesso", MessageBoxButtons.OK);
+            }
         }
+
     }
 }

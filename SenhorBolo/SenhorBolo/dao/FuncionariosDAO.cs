@@ -33,8 +33,9 @@ namespace SenhorBolo.dao
             return Dt;
         }
 
-        public void Cadastrar(int id, string nome, string senha, string rg, double salario, string email, string telefone, string cep)
+        public bool Cadastrar(int id, string nome, string senha, string rg, double salario, string email, string telefone, string cep)
         {
+            bool cadastro = false;
             try
             {
                 Conectar();
@@ -49,6 +50,7 @@ namespace SenhorBolo.dao
                 Cmd.Parameters.AddWithValue("@telefone", telefone);
                 Cmd.Parameters.AddWithValue("@CEP", cep);
                 Cmd.ExecuteNonQuery();
+                cadastro = true;
             }
             catch (Exception e)
             {
@@ -58,7 +60,7 @@ namespace SenhorBolo.dao
             {
                 Desconectar();
             }
-
+            return cadastro;
         }
 
         public DataTable getFuncionarios()

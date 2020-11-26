@@ -25,7 +25,7 @@ namespace SenhorBolo.dao
                 Dr = Cmd.ExecuteReader();
                 if (Dr.HasRows) //Caso seja o sql tenha retorno, o valor é tido como valido
                 {
-                    if (userType == 0)
+                    if (userType == 1)
                     {
                         while (Dr.Read())
                         {

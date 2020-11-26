@@ -66,7 +66,7 @@
             this.lblAsteristico.ForeColor = System.Drawing.Color.Red;
             this.lblAsteristico.Location = new System.Drawing.Point(123, 624);
             this.lblAsteristico.Name = "lblAsteristico";
-            this.lblAsteristico.Size = new System.Drawing.Size(13, 33);
+            this.lblAsteristico.Size = new System.Drawing.Size(10, 21);
             this.lblAsteristico.TabIndex = 61;
             this.lblAsteristico.Text = "*";
             // 
@@ -77,7 +77,7 @@
             this.lblCampoObrigatorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.lblCampoObrigatorio.Location = new System.Drawing.Point(145, 624);
             this.lblCampoObrigatorio.Name = "lblCampoObrigatorio";
-            this.lblCampoObrigatorio.Size = new System.Drawing.Size(212, 29);
+            this.lblCampoObrigatorio.Size = new System.Drawing.Size(143, 20);
             this.lblCampoObrigatorio.TabIndex = 60;
             this.lblCampoObrigatorio.Text = "Campos obrigatório";
             // 
@@ -147,7 +147,7 @@
             this.lblEndereco.ForeColor = System.Drawing.Color.Black;
             this.lblEndereco.Location = new System.Drawing.Point(543, 286);
             this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(119, 34);
+            this.lblEndereco.Size = new System.Drawing.Size(80, 23);
             this.lblEndereco.TabIndex = 56;
             this.lblEndereco.Text = "Endereço";
             // 
@@ -177,7 +177,6 @@
             this.txtDescricao.ShadowDecoration.Parent = this.txtDescricao;
             this.txtDescricao.Size = new System.Drawing.Size(252, 35);
             this.txtDescricao.TabIndex = 55;
-            this.txtDescricao.UseSystemPasswordChar = true;
             // 
             // lblDescricao
             // 
@@ -186,7 +185,7 @@
             this.lblDescricao.ForeColor = System.Drawing.Color.Black;
             this.lblDescricao.Location = new System.Drawing.Point(127, 323);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(125, 34);
+            this.lblDescricao.Size = new System.Drawing.Size(83, 23);
             this.lblDescricao.TabIndex = 54;
             this.lblDescricao.Text = "Descrição";
             // 
@@ -224,7 +223,7 @@
             this.lblCidade.ForeColor = System.Drawing.Color.Black;
             this.lblCidade.Location = new System.Drawing.Point(543, 368);
             this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(89, 34);
+            this.lblCidade.Size = new System.Drawing.Size(60, 23);
             this.lblCidade.TabIndex = 52;
             this.lblCidade.Text = "Cidade";
             // 
@@ -262,7 +261,7 @@
             this.lblCNPJ.ForeColor = System.Drawing.Color.Black;
             this.lblCNPJ.Location = new System.Drawing.Point(127, 241);
             this.lblCNPJ.Name = "lblCNPJ";
-            this.lblCNPJ.Size = new System.Drawing.Size(72, 34);
+            this.lblCNPJ.Size = new System.Drawing.Size(50, 23);
             this.lblCNPJ.TabIndex = 50;
             this.lblCNPJ.Text = "CNPJ";
             // 
@@ -281,7 +280,7 @@
             this.lblCadastroFornecedores.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold);
             this.lblCadastroFornecedores.Location = new System.Drawing.Point(56, 47);
             this.lblCadastroFornecedores.Name = "lblCadastroFornecedores";
-            this.lblCadastroFornecedores.Size = new System.Drawing.Size(545, 53);
+            this.lblCadastroFornecedores.Size = new System.Drawing.Size(363, 36);
             this.lblCadastroFornecedores.TabIndex = 48;
             this.lblCadastroFornecedores.Text = "Cadastro de fornecedores";
             // 
@@ -311,7 +310,6 @@
             this.txtContato.ShadowDecoration.Parent = this.txtContato;
             this.txtContato.Size = new System.Drawing.Size(252, 35);
             this.txtContato.TabIndex = 64;
-            this.txtContato.UseSystemPasswordChar = true;
             // 
             // lblContato
             // 
@@ -320,7 +318,7 @@
             this.lblContato.ForeColor = System.Drawing.Color.Black;
             this.lblContato.Location = new System.Drawing.Point(127, 405);
             this.lblContato.Name = "lblContato";
-            this.lblContato.Size = new System.Drawing.Size(99, 34);
+            this.lblContato.Size = new System.Drawing.Size(66, 23);
             this.lblContato.TabIndex = 63;
             this.lblContato.Text = "Contato";
             // 

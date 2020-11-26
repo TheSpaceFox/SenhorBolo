@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using SenhorBolo.common;
 namespace SenhorBolo
 {
     public partial class Gerenciamento : Form
@@ -17,6 +17,19 @@ namespace SenhorBolo
         {
             InitializeComponent();
             subMenu();
+            setMensagemBoasVinda();
+        }
+
+        public void setMensagemBoasVinda()
+        { 
+            if (DateTime.Now.Hour < 12)
+            {
+                lblBoasVindas.Text = "Bom dia, " + Administrador.nomeAdmin + "!";
+            } else if (DateTime.Now.Hour < 18) {
+                lblBoasVindas.Text = "Boa tarde, " + Administrador.nomeAdmin + "!";
+            } else {
+                lblBoasVindas.Text = "Boa noite, " + Administrador.nomeAdmin + "!";
+            }
         }
 
 
@@ -101,7 +114,7 @@ namespace SenhorBolo
         private void btnCadastrarProduto_Click(object sender, EventArgs e)
         {
             openChildForm(new CadastroProduto());
-            showSubMenu(painelDropFuncionario);
+            showSubMenu(painelDropProduto);
         }
         private void btnGerenciarProdutos_Click(object sender, EventArgs e)
         {

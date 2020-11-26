@@ -33,7 +33,14 @@ namespace SenhorBolo.view
             }
             else
             {
-                fornecedor.Cadastrar(txtCNPJ.Text, txtDescricao.Text, txtContato.Text, txtEndereco.Text, txtCidade.Text);
+                if (fornecedor.Cadastrar(txtCNPJ.Text, txtDescricao.Text, txtContato.Text, txtEndereco.Text, txtCidade.Text))
+                {
+                    MessageBox.Show("Fornecedor cadastrado com sucesso!");
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao cadastrar ;-;");
+                }
                 limparTexto();
             }
         }

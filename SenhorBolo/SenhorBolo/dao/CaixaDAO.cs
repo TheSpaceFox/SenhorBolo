@@ -43,13 +43,38 @@ namespace SenhorBolo.dao
             try
             {
                 Conectar();
-                Cmd = new SqlCommand("valorUnit", Con);
+                Cmd = new SqlCommand("gerarVenda", Con);
                 Cmd.CommandType = CommandType.StoredProcedure;
-                Cmd.Parameters.AddWithValue("@idFunc", Funcionario.idFuncionario);
-                Cmd.Parameters.AddWithValue("@data", DateTime.Now.ToString("MM-dd-yyyy"));
+                Cmd.Parameters.AddWithValue("@data", DateTime.Now.ToString("dd-MM-yyyy"));
+                Cmd.Parameters.AddWithValue("@idFuncionario", Funcionario.idFuncionario);
                 Cmd.ExecuteNonQuery();
             }
             finally{
+                Desconectar();
+            }
+        }
+
+        public void gerarDetalheVenda(string descProd, int qtde, double valorTotal)
+        {
+            try
+            {
+                Conectar();
+                Cmd = new SqlCommand("pegarID", Con);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.AddWithValue("@nomeProd", descProd);
+                Cmd.ExecuteNonQuery();
+                Object id = Cmd.ExecuteScalar();
+                int idProduto = Convert.ToInt32(id);
+                Cmd = new SqlCommand("gerarDetalheVenda", Con);
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.AddWithValue("@idVenda", 0);
+                Cmd.Parameters.AddWithValue("@idProduto", idProduto);
+                Cmd.Parameters.AddWithValue("@qtde", qtde);
+                Cmd.Parameters.AddWithValue("@valorTotal", valorTotal);
+                Cmd.ExecuteNonQuery();
+            }
+            finally
+            {
                 Desconectar();
             }
         }

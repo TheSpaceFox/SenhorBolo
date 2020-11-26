@@ -65,9 +65,9 @@
             this.lblCampoObrigatorio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
             this.lblCampoObrigatorio.Location = new System.Drawing.Point(92, 618);
             this.lblCampoObrigatorio.Name = "lblCampoObrigatorio";
-            this.lblCampoObrigatorio.Size = new System.Drawing.Size(153, 21);
+            this.lblCampoObrigatorio.Size = new System.Drawing.Size(243, 21);
             this.lblCampoObrigatorio.TabIndex = 39;
-            this.lblCampoObrigatorio.Text = "Selecione um campo";
+            this.lblCampoObrigatorio.Text = "Para excluir, selecione um campo";
             // 
             // controlFechar
             // 
@@ -186,6 +186,7 @@
             this.btnPesquisa.Size = new System.Drawing.Size(145, 36);
             this.btnPesquisa.TabIndex = 34;
             this.btnPesquisa.Text = "Pesquisar";
+            this.btnPesquisa.Click += new System.EventHandler(this.btnPesquisa_Click);
             // 
             // guna2HtmlLabel1
             // 

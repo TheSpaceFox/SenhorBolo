@@ -13,13 +13,12 @@ namespace SenhorBolo
 {
     public partial class CadastroFuncionario : Form
     {
+        ControleFuncionarios funcionario = new ControleFuncionarios();
         public CadastroFuncionario()
         {
             InitializeComponent();
             ControlHeightWidth();
         }
-
-        ControleFuncionarios funcionario = new ControleFuncionarios();
 
         private void controlFechar_Click(object sender, EventArgs e)
         {
@@ -32,9 +31,15 @@ namespace SenhorBolo
             {
                 MessageBox.Show("Pro favor, preencha todos os campos obrigatórios");
             } else {
-                double salario = Convert.ToDouble(txtSalario.Text);
-                salario = (salario / 100);
-                funcionario.Cadastrar(Convert.ToInt32(txtID.Text), txtNome.Text, txtSenha.Text, txtRG.Text, salario, txtEmail.Text, txtTelefone.Text, txtCEP.Text);
+                double salario = (Convert.ToDouble(txtSalario.Text) / 100);
+                if (funcionario.Cadastrar(Convert.ToInt32(txtID.Text), txtNome.Text, txtSenha.Text, txtRG.Text, salario, txtEmail.Text, txtTelefone.Text, txtCEP.Text))
+                {
+                    MessageBox.Show("Funcionário cadastrado com sucesso!", "Sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao cadastrar ;-;");
+                }
                 limparTexto();
             }
         }

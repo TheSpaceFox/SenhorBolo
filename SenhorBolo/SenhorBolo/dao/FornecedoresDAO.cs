@@ -32,8 +32,9 @@ namespace SenhorBolo.dao
             }
             return Dt;
         }
-        public void Cadastrar(string cnpj, string descfor, string contato, string endereco, string cidade)
+        public bool Cadastrar(string cnpj, string descfor, string contato, string endereco, string cidade)
         {
+            bool cadastro = false;
             try
             {
                 Conectar();
@@ -45,6 +46,7 @@ namespace SenhorBolo.dao
                 Cmd.Parameters.AddWithValue("@endereco", endereco);
                 Cmd.Parameters.AddWithValue("@cidade", cidade);
                 Cmd.ExecuteNonQuery();
+                cadastro = true;
             }
             catch (Exception e)
             {
@@ -54,7 +56,7 @@ namespace SenhorBolo.dao
             {
                 Desconectar();
             }
-
+            return cadastro;
         }
 
         public DataTable getFornecedores()

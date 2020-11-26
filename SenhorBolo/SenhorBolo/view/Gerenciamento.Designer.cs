@@ -47,11 +47,14 @@
             this.btnFuncionarios = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.lblBoasVindas = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.painelSideBar.SuspendLayout();
             this.painelDropFornecedor.SuspendLayout();
             this.painelDropProduto.SuspendLayout();
             this.painelDropFuncionario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.panelChildForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // painelSideBar
@@ -346,11 +349,36 @@
             // 
             // panelChildForm
             // 
+            this.panelChildForm.BackColor = System.Drawing.Color.White;
+            this.panelChildForm.Controls.Add(this.guna2HtmlLabel1);
+            this.panelChildForm.Controls.Add(this.lblBoasVindas);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(289, 0);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(927, 696);
             this.panelChildForm.TabIndex = 2;
+            // 
+            // lblBoasVindas
+            // 
+            this.lblBoasVindas.BackColor = System.Drawing.Color.Transparent;
+            this.lblBoasVindas.Font = new System.Drawing.Font("Helvetica", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBoasVindas.ForeColor = System.Drawing.Color.Black;
+            this.lblBoasVindas.Location = new System.Drawing.Point(193, 312);
+            this.lblBoasVindas.Name = "lblBoasVindas";
+            this.lblBoasVindas.Size = new System.Drawing.Size(293, 47);
+            this.lblBoasVindas.TabIndex = 0;
+            this.lblBoasVindas.Text = "Bom Dia, Felipe!";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Helvetica", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(193, 365);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(554, 34);
+            this.guna2HtmlLabel1.TabIndex = 1;
+            this.guna2HtmlLabel1.Text = "Clique no menu lateral para acessar os forms";
             // 
             // Gerenciamento
             // 
@@ -371,6 +399,8 @@
             this.painelDropProduto.ResumeLayout(false);
             this.painelDropFuncionario.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.panelChildForm.ResumeLayout(false);
+            this.panelChildForm.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -392,8 +422,10 @@
         private Guna.UI2.WinForms.Guna2Button btnProdutos;
         private Guna.UI2.WinForms.Guna2Button btnGerenciarFuncionarios;
         private Guna.UI2.WinForms.Guna2Button btnCadastrarFornecedor;
-        private System.Windows.Forms.Panel panelChildForm;
         private Guna.UI2.WinForms.Guna2Button btnSair;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private System.Windows.Forms.Panel panelChildForm;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblBoasVindas;
     }
 }

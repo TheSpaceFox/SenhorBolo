@@ -19,9 +19,9 @@ namespace SenhorBolo.model
             funcionarios = funcionariosDAO.getFuncionarios();
             return funcionarios;
         }
-        public void Cadastrar(int id, string nome, string senha, string rg, double salario, string email, string telefone, string cep)
+        public bool Cadastrar(int id, string nome, string senha, string rg, double salario, string email, string telefone, string cep)
         {
-            funcionariosDAO.Cadastrar(id, nome, senha, rg, salario, email, telefone, cep);
+            return funcionariosDAO.Cadastrar(id, nome, senha, rg, salario, email, telefone, cep);
         }
 
         public DataTable funcionariosCadastrados()

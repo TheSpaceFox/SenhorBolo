@@ -19,9 +19,9 @@ namespace SenhorBolo.model
             return produtos;
 
         }
-        public void Cadastrar(int id, string descprod, double preco, double maisvalia)
+        public bool Cadastrar(int id, string descprod, double preco, double maisvalia)
         {
-            produtosDAO.Cadastrar(id, descprod, preco, maisvalia);
+            return produtosDAO.Cadastrar(id, descprod, preco, maisvalia);
         }
 
         public DataTable ProdutosCadastrados()

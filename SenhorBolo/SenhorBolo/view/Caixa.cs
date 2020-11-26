@@ -31,9 +31,16 @@ namespace SenhorBolo {
             if (e.KeyCode == Keys.Enter) 
             {
                 caixa.getProduto(int.Parse(txtCodigo.Text));
-                txtPrecoUnitario.Text = "R$" + Produto.preco.ToString("0,00");
-                SendKeys.Send("{TAB}");
-                SendKeys.Send("{TAB}");
+                txtPrecoUnitario.Text = Produto.preco.ToString("0,00");
+                txtQuantidade.Focus();
+            }
+            if (e.KeyCode == Keys.F1)
+            {
+                txtSubtotal.Text = "R$ " + subTotal.ToString("0.00");
+                txtValorPago.Enabled = true;
+                txtCodigo.Enabled = false;
+                txtQuantidade.Enabled = false;
+                txtValorPago.Focus();
             }
         }
 
@@ -41,13 +48,10 @@ namespace SenhorBolo {
         {
             if (e.KeyCode == Keys.Enter)
             {
-                txtTotalItem.Text = Convert.ToString(int.Parse(txtQuantidade.Text) * int.Parse(txtPrecoUnitario.Text));
+                txtTotalItem.Text = Convert.ToString(double.Parse(txtQuantidade.Text) * double.Parse(txtPrecoUnitario.Text));
                 subTotal += double.Parse(txtTotalItem.Text);
                 adicionarProduto();
-                SendKeys.Send("{TAB}");
-                SendKeys.Send("{TAB}");
-                SendKeys.Send("{TAB}");
-                SendKeys.Send("{TAB}");
+                txtCodigo.Focus();
             }
 
             if (e.KeyCode == Keys.F1)
@@ -76,13 +80,50 @@ namespace SenhorBolo {
             txtPrecoUnitario.Text = null;
             txtQuantidade.Text = null;
             txtTotalItem.Text = null;
+            txtSubtotal.Text = null;
+            txtTroco.Text = null;
+            txtValorPago.Text = null;
         }
 
-        private void Caixa_KeyDown(object sender, KeyEventArgs e)
+        private void txtValorPago_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.F1)
+            if (e.KeyCode == Keys.Enter)
             {
-                txtSubtotal.Text = subTotal.ToString();
+                txtTroco.Text = "R$ " + (double.Parse(txtValorPago.Text) - subTotal).ToString();
+                txtValorPago.Enabled = false;
+                finalizarCompra();
+            }
+        }
+
+        private void finalizarCompra()
+        {
+            if (MessageBox.Show("Deseja finalizar compra?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                string produto;
+                int qtde;
+                double valorTotal;
+                caixa.gerarVenda();
+                for (int i = 0; i < datagridListaProdutos.Rows.Count - 1; i++)
+                {
+                    produto = Convert.ToString(datagridListaProdutos.Rows[i].Cells[2].Value);
+                    qtde = Convert.ToInt32(datagridListaProdutos.Rows[i].Cells[3].Value);
+                    valorTotal = Convert.ToInt32(datagridListaProdutos.Rows[i].Cells[5].Value);
+                    caixa.gerarDetalheVenda(produto, qtde, valorTotal);
+                }
+                limparTextoProduto();
+                txtCodigo.Enabled = true;
+                txtQuantidade.Enabled = true;
+                txtCodigo.Focus();
+                datagridListaProdutos.Rows.Clear();
+                datagridListaProdutos.Refresh();
+            }
+        }
+
+        private void Caixa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                finalizarCompra();
             }
         }
 

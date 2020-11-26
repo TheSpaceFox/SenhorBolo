@@ -18,8 +18,11 @@ namespace SenhorBolo.view
         public Vendas()
         {
             InitializeComponent();
-            setVendasMensais();
             maisVendidos();
+            setLucroMensal();
+            setVendasMensais();
+            dataGridMaisVendidos.ClearSelection();
+            dataGridVendasMensais.ClearSelection();
         }
 
         public void maisVendidos()
@@ -29,10 +32,24 @@ namespace SenhorBolo.view
             dataGridMaisVendidos.DataSource = teste;
         }
 
+        public void setLucroMensal()
+        {
+            txtLucroMensal.Text = vendasControle.getLucroMensal();
+        }
+
         public void setVendasMensais()
         {
-            MessageBox.Show(vendasControle.vendasMensais());
-            txtLucroMensal.Text = vendasControle.vendasMensais();
+            dataGridVendasMensais.DataSource = vendasControle.getVendasMensais();
+        }
+
+        private void dataGridMaisVendidos_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+           dataGridMaisVendidos.ClearSelection();
+        }
+
+        private void controlFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
