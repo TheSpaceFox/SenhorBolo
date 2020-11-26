@@ -59,9 +59,9 @@ namespace SenhorBolo.view
             fornecedor.enderecoFor = txtEndereco.Text;
             fornecedor.cidade = txtCidade.Text;
             funcionou = fornecedores.updateFornecedor();
-            if (funcionou == false)
+            if (funcionou == true)
             {
-                MessageBox.Show("Login inválido, tente novamente", "Erro de Acesso");
+                MessageBox.Show("Fornecedor alterado com sucesso!");
             }
             LimparTexto();
         }

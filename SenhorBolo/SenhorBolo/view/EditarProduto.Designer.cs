@@ -143,6 +143,7 @@
             this.btnEditar.Size = new System.Drawing.Size(145, 36);
             this.btnEditar.TabIndex = 25;
             this.btnEditar.Text = "Salvar alterações";
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnLimpar
             // 

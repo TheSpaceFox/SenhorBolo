@@ -122,6 +122,7 @@
             this.txtQuantidade.ShadowDecoration.Parent = this.txtQuantidade;
             this.txtQuantidade.Size = new System.Drawing.Size(363, 48);
             this.txtQuantidade.TabIndex = 8;
+            this.txtQuantidade.TextChanged += new System.EventHandler(this.txtQuantidade_TextChanged);
             this.txtQuantidade.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQuantidade_KeyDown);
             // 
             // lblQuantidade

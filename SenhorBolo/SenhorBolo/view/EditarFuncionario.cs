@@ -61,9 +61,9 @@ namespace SenhorBolo.view
             Funcionario.email = txtEmail.Text;
             Funcionario.salario = double.Parse(txtSalario.Text);
             funcionou = funcionarios.updateFuncionario();
-            if (funcionou == false)
+            if (funcionou == true)
             {
-                MessageBox.Show("Login inválido, tente novamente", "Erro de Acesso");
+                MessageBox.Show("Funcionário alterado com sucesso!");
             }
             LimparTexto();
 

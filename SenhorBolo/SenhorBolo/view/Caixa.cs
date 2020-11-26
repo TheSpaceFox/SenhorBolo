@@ -21,6 +21,7 @@ namespace SenhorBolo {
         ControleCaixa caixa = new ControleCaixa();
         double subTotal = 0;
 
+
         private void relógio_Tick(object sender, EventArgs e)
         {
             lblHorario.Text = DateTime.Now.ToString("T");
@@ -31,12 +32,12 @@ namespace SenhorBolo {
             if (e.KeyCode == Keys.Enter) 
             {
                 caixa.getProduto(int.Parse(txtCodigo.Text));
-                txtPrecoUnitario.Text = Produto.preco.ToString("0,00");
+                txtPrecoUnitario.Text = Produto.preco.ToString("F2");
                 txtQuantidade.Focus();
             }
             if (e.KeyCode == Keys.F1)
             {
-                txtSubtotal.Text = "R$ " + subTotal.ToString("0.00");
+                txtSubtotal.Text = "R$ " + subTotal.ToString("F2");
                 txtValorPago.Enabled = true;
                 txtCodigo.Enabled = false;
                 txtQuantidade.Enabled = false;
@@ -48,6 +49,7 @@ namespace SenhorBolo {
         {
             if (e.KeyCode == Keys.Enter)
             {
+;
                 txtTotalItem.Text = Convert.ToString(double.Parse(txtQuantidade.Text) * double.Parse(txtPrecoUnitario.Text));
                 subTotal += double.Parse(txtTotalItem.Text);
                 adicionarProduto();
@@ -70,7 +72,7 @@ namespace SenhorBolo {
             datagridListaProdutos[2, linha].Value = Produto.descProd;
             datagridListaProdutos[3, linha].Value = txtQuantidade.Text;
             datagridListaProdutos[4, linha].Value = Produto.preco;
-            datagridListaProdutos[5, linha].Value = txtTotalItem.Text;
+            datagridListaProdutos[5, linha].Value = subTotal; 
             limparTextoProduto();
         }
 
@@ -127,5 +129,14 @@ namespace SenhorBolo {
             }
         }
 
+        private void txtQuantidade_TextChanged(object sender, EventArgs e)
+        {
+            double qtde = 0;
+            double.TryParse(txtQuantidade.Text, out qtde);
+            double valorUnit = 0;
+            double.TryParse(txtPrecoUnitario.Text, out valorUnit);
+            double totalItem = qtde * valorUnit;
+            txtTotalItem.Text = totalItem.ToString("F2");
+        }
     }
 }
